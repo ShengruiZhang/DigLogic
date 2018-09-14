@@ -1,0 +1,4 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Ray/Desktop/DigLogic/lab_2/seg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Seg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Ray/Desktop/DigLogic/lab_2/seg_sim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module seg_sim
