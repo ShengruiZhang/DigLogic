@@ -10,7 +10,7 @@ module Turning(L1, L2, L3, R1, R2, R3, L, R, E, Clk, RST);
 	reg [2:0] state, state_next;
 
 
-	always @(posedge, L, R, E) begin
+	always @(state, L, R, E) begin
 		case (state)
 			s_off: begin
 				// Turn light off
