@@ -1,0 +1,6 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Ray/Desktop/DigLogic/lab_practical/vote.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Voting
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Ray/Desktop/DigLogic/lab_practical/vote_sim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Voting_sim
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Ray/Desktop/DigLogic/lab_practical/lab_practical.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
