@@ -17,8 +17,11 @@ module Turning(L1, L2, L3, R1, R2, R3, L, R, E, Clk, RST);
 				L1 = 0; L2 = 0; L3 = 0; R1 = 0; R2 = 0; R3 = 0;
 
 				// Check input
-				if ((R ==1) & (L ==0) & (E == 0)) begin
+				if ((R == 1) & (L == 0) & (E == 0)) begin
 					state_next <= s_r1;
+				end
+				else if ((R == 0) & (L == 1) & (E == 0)) begin
+					state_next <= s_l1;
 				end
 				else if ((R == 0) & (L == 0) & (E == 0)) begin
 					state_next <= s_off;
@@ -160,12 +163,11 @@ module Turning(L1, L2, L3, R1, R2, R3, L, R, E, Clk, RST);
 
 
 	always @(posedge Clk) begin
-		if (RST ==1) begin
+		if (RST == 1) begin
 			state <= s_off;
 		end
 		else begin
 			state <= state_next;
 		end
 	end
-
 	endmodule

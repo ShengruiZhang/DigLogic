@@ -1,0 +1,34 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Fri Oct 12 14:56:51 2018
+# Process ID: 8068
+# Current directory: C:/Users/Ray/Desktop/DigLogic/lab_4/lab_4.runs/synth_1
+# Command line: vivado.exe -log Top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Top.tcl
+# Log file: C:/Users/Ray/Desktop/DigLogic/lab_4/lab_4.runs/synth_1/Top.vds
+# Journal file: C:/Users/Ray/Desktop/DigLogic/lab_4/lab_4.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source Top.tcl -notrace
+Command: synth_design -top Top -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 8376 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 334.996 ; gain = 100.207
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'Top' [C:/Users/Ray/Desktop/DigLogic/lab_4/top.v:3]
+ERROR: [Synth 8-36] 'ClkDiv' is not declared [C:/Users/Ray/Desktop/DigLogic/lab_4/top.v:14]
+WARNING: [Synth 8-85] always block has no event control specified [C:/Users/Ray/Desktop/DigLogic/lab_4/top.v:13]
+ERROR: [Synth 8-6156] failed synthesizing module 'Top' [C:/Users/Ray/Desktop/DigLogic/lab_4/top.v:3]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 389.664 ; gain = 154.875
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+INFO: [Common 17-83] Releasing license: Synthesis
+3 Infos, 1 Warnings, 0 Critical Warnings and 3 Errors encountered.
+synth_design failed
+ERROR: [Common 17-69] Command failed: Synthesis failed - please see the console or run log file for details
+INFO: [Common 17-206] Exiting Vivado at Fri Oct 12 14:57:00 2018...
