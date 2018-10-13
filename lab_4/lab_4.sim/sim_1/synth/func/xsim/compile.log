@@ -1,0 +1,8 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/shengruizhang/Desktop/DigLogic-master/lab_4/lab_4.sim/sim_1/synth/func/xsim/vending_sim_func_synth.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vending
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/shengruizhang/Desktop/DigLogic-master/lab_4/vending_sim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vending_sim
+WARNING: [VRFC 10-159] /* in comment [C:/Users/shengruizhang/Desktop/DigLogic-master/lab_4/vending_sim.v:72]
+WARNING: [VRFC 10-159] /* in comment [C:/Users/shengruizhang/Desktop/DigLogic-master/lab_4/vending_sim.v:106]
+WARNING: [VRFC 10-159] /* in comment [C:/Users/shengruizhang/Desktop/DigLogic-master/lab_4/vending_sim.v:124]

@@ -2,7 +2,7 @@
 
 module vending(Clk, RST, N, D, Q, CAN, CHG);
 	input N, D, Q, Clk, RST;
-	output reg CAN; // Output register
+	output reg CAN;
 	output reg [5:0] CHG;
 
 	parameter INIT = 0, v5 = 1, v10 = 2, v15 = 3, v20 = 4,
@@ -12,7 +12,6 @@ module vending(Clk, RST, N, D, Q, CAN, CHG);
 
 	always @(state, N, D, Q) begin
 		case (state)
-
 			// Initial State
 			INIT: begin
 				CAN <= 0; CHG <= 0;
@@ -30,7 +29,7 @@ module vending(Clk, RST, N, D, Q, CAN, CHG);
 			end
 
 			v5: begin
-				CAN <= 0; CHG <= 0;
+				CAN <= 0; CHG <= 5;
 				
 				if((N == 1) && (D == 0) && (Q == 0)) begin
 					state_next <= v10;
@@ -44,7 +43,7 @@ module vending(Clk, RST, N, D, Q, CAN, CHG);
 			end
 			
 			v10: begin
-				CAN <= 0; CHG <= 0;
+				CAN <= 0; CHG <= 10;
 				
 				if((N == 1) && (D == 0) && (Q == 0)) begin
 					state_next <= v15;
@@ -58,7 +57,7 @@ module vending(Clk, RST, N, D, Q, CAN, CHG);
 			end
 			
 			v15: begin
-				CAN <= 0; CHG <= 0;
+				CAN <= 0; CHG <= 15;
 				
 				if((N == 1) && (D == 0) && (Q == 0)) begin
 					state_next <= v20;
@@ -72,7 +71,7 @@ module vending(Clk, RST, N, D, Q, CAN, CHG);
 			end
 			
 			v20: begin
-				CAN <= 0; CHG <= 0;
+				CAN <= 0; CHG <= 20;
 				
 				if((N == 1) && (D == 0) && (Q == 0)) begin
 					state_next <= v25;
@@ -86,7 +85,7 @@ module vending(Clk, RST, N, D, Q, CAN, CHG);
 			end
 			
 			v25: begin
-				CAN <= 0; CHG <= 0;
+				CAN <= 0; CHG <= 25;
 				
 				if((N == 1) && (D == 0) && (Q == 0)) begin
 					state_next <= v30;
@@ -122,6 +121,11 @@ module vending(Clk, RST, N, D, Q, CAN, CHG);
 			v50: begin
 				CAN <= 1; CHG <= 20;
 				state_next <= v50;
+			end
+			default: begin
+				CAN <= 0; CHG <= 0;
+                state_next <= INIT;			
+			
 			end
 		endcase
 	end

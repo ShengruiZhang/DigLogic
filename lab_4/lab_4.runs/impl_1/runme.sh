@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/Ray/Desktop/DigLogic/lab_4/lab_4.runs/impl_1'
+HD_PWD='C:/Users/shengruizhang/Desktop/DigLogic-master/lab_4/lab_4.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

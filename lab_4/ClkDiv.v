@@ -2,7 +2,8 @@
 module ClkDiv(Clk, Rst, ClkOut);
    input Clk, Rst;
    output reg ClkOut;
-  //to create 1 Hz clock from 100-MHz on the board
+  //to create 5000 Hz clock from 100-MHz on the board
+  //freg_ClkOut =  freq_Clk/ [2*[DIVVAL+1]]
   parameter DivVal = 9999;  
    reg [25:0] DivCnt;
    reg ClkInt;

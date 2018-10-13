@@ -9,6 +9,7 @@ module BTN_sync(Clk, BTN, RST, Outp);
 	reg [1:0] state, state_next;
 
 	always @(BTN, state) begin
+	  // Outp <= 0;
 		case (state)
 			INIT: begin
 				Outp <= 0;
@@ -20,7 +21,11 @@ module BTN_sync(Clk, BTN, RST, Outp);
 			
 			Pressed: begin
 				Outp <= 1;
-				state_next <= post_pres;
+				//if (BTN == 1) begin
+				
+				    state_next <= post_pres;
+				//end
+                //else state_next <= INIT;
 			end
 
 			post_pres: begin
@@ -29,6 +34,10 @@ module BTN_sync(Clk, BTN, RST, Outp);
 					state_next <= INIT;
 				end
 				else state_next <= post_pres;
+			end
+			default: begin
+			     Outp <= 0;
+			     state_next <= INIT;
 			end
 		endcase
 	end

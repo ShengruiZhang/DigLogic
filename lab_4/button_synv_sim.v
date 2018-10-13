@@ -3,19 +3,20 @@
 module button_sim();
 	reg clock, button, reset;
 	wire outp;
-
-	BTN_sync button_test(button, clock, reset, outp);
+    //BTN_sync(Clk, BTN, RST, Outp);
+	BTN_sync button_test(clock,button, reset, outp);
 
 	always begin
 		clock <= 0;
-		#50;
+		#10;
 		clock <= 1;
-		#50;
+		#10;
 	end
 
 	initial begin
+	    reset <= 1;
 		@(posedge clock);
-		reset <= 1;
+		#10 reset <= 0;
 
 		#10;
 		@(posedge clock);

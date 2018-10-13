@@ -27,23 +27,7 @@ set_property IOSTANDARD LVCMOS33 [get_ports Clk]
 
 
 ##----------------------------------------------------------------------------
-##This part is to assign pin numbers for 7-bit input number
-##Number[6] - Most Significant Bit (MSB) => SW6 (pin U18)
-##Number[0] - Least Siginificant Bit (LSB) => SW0 (pin J15)
-set_property IOSTANDARD LVCMOS33 [get_ports {Number[6]}]
-set_property PACKAGE_PIN U18 [get_ports {Number[6]}]
-set_property IOSTANDARD LVCMOS33 [get_ports {Number[5]}]
-set_property PACKAGE_PIN T18 [get_ports {Number[5]}]
-set_property IOSTANDARD LVCMOS33 [get_ports {Number[4]}]
-set_property PACKAGE_PIN R17 [get_ports {Number[4]}]
-set_property IOSTANDARD LVCMOS33 [get_ports {Number[3]}]
-set_property PACKAGE_PIN R15 [get_ports {Number[3]}]
-set_property IOSTANDARD LVCMOS33 [get_ports {Number[2]}]
-set_property PACKAGE_PIN M13 [get_ports {Number[2]}]
-set_property IOSTANDARD LVCMOS33 [get_ports {Number[1]}]
-set_property PACKAGE_PIN L16 [get_ports {Number[1]}]
-set_property IOSTANDARD LVCMOS33 [get_ports {Number[0]}]
-set_property PACKAGE_PIN J15 [get_ports {Number[0]}]
+
 ##----------------------------------------------------------------------------
 
 
