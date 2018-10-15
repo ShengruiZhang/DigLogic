@@ -40,6 +40,7 @@ module vending(Clk, RST, N, D, Q, CAN, CHG);
 				else if((N == 0) && (D == 0) && (Q == 1)) begin
 					state_next <= v30;
 				end
+				else state_next <= v5;
 			end
 			
 			v10: begin
@@ -54,6 +55,7 @@ module vending(Clk, RST, N, D, Q, CAN, CHG);
 				else if((N == 0) && (D == 0) && (Q == 1)) begin
 					state_next <= v35;
 				end
+				else state_next <= v10;
 			end
 			
 			v15: begin
@@ -68,6 +70,7 @@ module vending(Clk, RST, N, D, Q, CAN, CHG);
 				else if((N == 0) && (D == 0) && (Q == 1)) begin
 					state_next <= v40;
 				end
+				else state_next <= v15;
 			end
 			
 			v20: begin
@@ -82,6 +85,7 @@ module vending(Clk, RST, N, D, Q, CAN, CHG);
 				else if((N == 0) && (D == 0) && (Q == 1)) begin
 					state_next <= v45;
 				end
+				else state_next <= v20;
 			end
 			
 			v25: begin
@@ -96,6 +100,7 @@ module vending(Clk, RST, N, D, Q, CAN, CHG);
 				else if((N == 0) && (D == 0) && (Q == 1)) begin
 					state_next <= v50;
 				end
+				else state_next <= v25;
 			end
 			
 			v30: begin
