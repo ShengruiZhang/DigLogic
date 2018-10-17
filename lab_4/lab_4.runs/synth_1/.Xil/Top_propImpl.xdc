@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:C:/Users/shengruizhang/Desktop/DigLogic-master/lab_4/Vending.xdc rfile:../../../Vending.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:C:/Users/Ray/Desktop/DigLogic/lab_4/Vending.xdc rfile:../../../Vending.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:4 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN J17 [get_ports {en_out[0]}]
 set_property src_info {type:XDC file:1 line:6 export:INPUT save:INPUT read:READ} [current_design]

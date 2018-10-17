@@ -1,12 +1,12 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2018.2.1 (win64) Build 2288692 Thu Jul 26 18:24:02 MDT 2018
-| Date         : Fri Oct 12 16:45:26 2018
-| Host         : ENGR-ECE301PC03 running 64-bit major release  (build 9200)
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Sun Oct 14 21:03:58 2018
+| Host         : sheng running 64-bit major release  (build 9200)
 | Command      : report_timing_summary -max_paths 10 -file Top_timing_summary_routed.rpt -pb Top_timing_summary_routed.pb -rpx Top_timing_summary_routed.rpx -warn_on_violation
 | Design       : Top
 | Device       : 7a100t-csg324
-| Speed File   : -1  PRODUCTION 1.23 2018-06-13
+| Speed File   : -1  PRODUCTION 1.22 2018-03-21
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Timing Summary Report
@@ -56,40 +56,6 @@ Table of Contents
 
  There are 17 register/latch pins with no clock driven by root clock pin: u1/ClkOut_reg/Q (HIGH)
 
- There are 11 register/latch pins with no clock driven by root clock pin: u2/FSM_sequential_state_reg[0]/Q (HIGH)
-
- There are 11 register/latch pins with no clock driven by root clock pin: u2/FSM_sequential_state_reg[1]/Q (HIGH)
-
- There are 11 register/latch pins with no clock driven by root clock pin: u3/FSM_sequential_state_reg[0]/Q (HIGH)
-
- There are 11 register/latch pins with no clock driven by root clock pin: u3/FSM_sequential_state_reg[1]/Q (HIGH)
-
- There are 11 register/latch pins with no clock driven by root clock pin: u4/FSM_sequential_state_reg[0]/Q (HIGH)
-
- There are 11 register/latch pins with no clock driven by root clock pin: u4/FSM_sequential_state_reg[1]/Q (HIGH)
-
- There are 11 register/latch pins with no clock driven by root clock pin: u5/FSM_onehot_state_reg[0]/Q (HIGH)
-
- There are 11 register/latch pins with no clock driven by root clock pin: u5/FSM_onehot_state_reg[10]/Q (HIGH)
-
- There are 11 register/latch pins with no clock driven by root clock pin: u5/FSM_onehot_state_reg[1]/Q (HIGH)
-
- There are 11 register/latch pins with no clock driven by root clock pin: u5/FSM_onehot_state_reg[2]/Q (HIGH)
-
- There are 11 register/latch pins with no clock driven by root clock pin: u5/FSM_onehot_state_reg[3]/Q (HIGH)
-
- There are 11 register/latch pins with no clock driven by root clock pin: u5/FSM_onehot_state_reg[4]/Q (HIGH)
-
- There are 11 register/latch pins with no clock driven by root clock pin: u5/FSM_onehot_state_reg[5]/Q (HIGH)
-
- There are 11 register/latch pins with no clock driven by root clock pin: u5/FSM_onehot_state_reg[6]/Q (HIGH)
-
- There are 11 register/latch pins with no clock driven by root clock pin: u5/FSM_onehot_state_reg[7]/Q (HIGH)
-
- There are 11 register/latch pins with no clock driven by root clock pin: u5/FSM_onehot_state_reg[8]/Q (HIGH)
-
- There are 11 register/latch pins with no clock driven by root clock pin: u5/FSM_onehot_state_reg[9]/Q (HIGH)
-
 
 2. checking constant_clock
 --------------------------
@@ -103,7 +69,7 @@ Table of Contents
 
 4. checking unconstrained_internal_endpoints
 --------------------------------------------
- There are 117 pins that are not constrained for maximum delay. (HIGH)
+ There are 106 pins that are not constrained for maximum delay. (HIGH)
 
  There are 0 pins that are not constrained for maximum delay due to constant clock.
 

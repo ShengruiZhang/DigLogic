@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2018.2.1 (win64) Build 2288692 Thu Jul 26 18:24:02 MDT 2018
-| Date         : Fri Oct 12 16:45:25 2018
-| Host         : ENGR-ECE301PC03 running 64-bit major release  (build 9200)
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Sun Oct 14 21:03:56 2018
+| Host         : sheng running 64-bit major release  (build 9200)
 | Command      : report_methodology -file Top_methodology_drc_routed.rpt -pb Top_methodology_drc_routed.pb -rpx Top_methodology_drc_routed.rpx
 | Design       : Top
 | Device       : xc7a100tcsg324-1
@@ -23,12 +23,11 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 75
+             Violations found: 64
 +-----------+----------+-----------------------------+------------+
 | Rule      | Severity | Description                 | Violations |
 +-----------+----------+-----------------------------+------------+
 | TIMING-17 | Warning  | Non-clocked sequential cell | 64         |
-| TIMING-20 | Warning  | Non-clocked latch           | 11         |
 +-----------+----------+-----------------------------+------------+
 
 2. REPORT DETAILS
@@ -351,61 +350,6 @@ Related violations: <none>
 TIMING-17#64 Warning
 Non-clocked sequential cell  
 The clock pin u6/cnt_reg[9]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#1 Warning
-Non-clocked latch  
-The latch u5/FSM_onehot_state_next_reg[0] cannot be properly analyzed as its control pin u5/FSM_onehot_state_next_reg[0]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#2 Warning
-Non-clocked latch  
-The latch u5/FSM_onehot_state_next_reg[10] cannot be properly analyzed as its control pin u5/FSM_onehot_state_next_reg[10]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#3 Warning
-Non-clocked latch  
-The latch u5/FSM_onehot_state_next_reg[1] cannot be properly analyzed as its control pin u5/FSM_onehot_state_next_reg[1]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#4 Warning
-Non-clocked latch  
-The latch u5/FSM_onehot_state_next_reg[2] cannot be properly analyzed as its control pin u5/FSM_onehot_state_next_reg[2]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#5 Warning
-Non-clocked latch  
-The latch u5/FSM_onehot_state_next_reg[3] cannot be properly analyzed as its control pin u5/FSM_onehot_state_next_reg[3]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#6 Warning
-Non-clocked latch  
-The latch u5/FSM_onehot_state_next_reg[4] cannot be properly analyzed as its control pin u5/FSM_onehot_state_next_reg[4]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#7 Warning
-Non-clocked latch  
-The latch u5/FSM_onehot_state_next_reg[5] cannot be properly analyzed as its control pin u5/FSM_onehot_state_next_reg[5]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#8 Warning
-Non-clocked latch  
-The latch u5/FSM_onehot_state_next_reg[6] cannot be properly analyzed as its control pin u5/FSM_onehot_state_next_reg[6]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#9 Warning
-Non-clocked latch  
-The latch u5/FSM_onehot_state_next_reg[7] cannot be properly analyzed as its control pin u5/FSM_onehot_state_next_reg[7]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#10 Warning
-Non-clocked latch  
-The latch u5/FSM_onehot_state_next_reg[8] cannot be properly analyzed as its control pin u5/FSM_onehot_state_next_reg[8]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#11 Warning
-Non-clocked latch  
-The latch u5/FSM_onehot_state_next_reg[9] cannot be properly analyzed as its control pin u5/FSM_onehot_state_next_reg[9]/G is not reached by a timing clock
 Related violations: <none>
 
 
