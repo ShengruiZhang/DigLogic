@@ -1,0 +1,4 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Ray/Desktop/DigLogic/lab_practical_2/detector.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module detector
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Ray/Desktop/DigLogic/lab_practical_2/detector_sim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module detector_sim
