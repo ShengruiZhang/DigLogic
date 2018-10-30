@@ -1,0 +1,6 @@
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+in=0004, out=00000004
+in=7000, out=00007000
+in=9000, out=ffff9000
+in=f000, out=fffff000

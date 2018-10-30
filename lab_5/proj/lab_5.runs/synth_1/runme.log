@@ -1,0 +1,255 @@
+
+*** Running vivado
+    with args -log SignExt.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source SignExt.tcl
+
+
+****** Vivado v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source SignExt.tcl -notrace
+Command: synth_design -top SignExt -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 6136 
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 334.715 ; gain = 100.250
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'SignExt' [C:/Users/Ray/Desktop/DigLogic/lab_5/comps/SignExt/signext.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'SignExt' (1#1) [C:/Users/Ray/Desktop/DigLogic/lab_5/comps/SignExt/signext.v:12]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 389.793 ; gain = 155.328
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 389.793 ; gain = 155.328
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 389.793 ; gain = 155.328
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+WARNING: [Synth 8-327] inferring latch for variable 'out_reg' [C:/Users/Ray/Desktop/DigLogic/lab_5/comps/SignExt/signext.v:25]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 389.793 ; gain = 155.328
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module SignExt 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-3886] merging instance 'out_reg[15]' (LD) to 'out_reg[31]'
+INFO: [Synth 8-3886] merging instance 'out_reg[16]' (LD) to 'out_reg[31]'
+INFO: [Synth 8-3886] merging instance 'out_reg[17]' (LD) to 'out_reg[31]'
+INFO: [Synth 8-3886] merging instance 'out_reg[18]' (LD) to 'out_reg[31]'
+INFO: [Synth 8-3886] merging instance 'out_reg[19]' (LD) to 'out_reg[31]'
+INFO: [Synth 8-3886] merging instance 'out_reg[20]' (LD) to 'out_reg[31]'
+INFO: [Synth 8-3886] merging instance 'out_reg[21]' (LD) to 'out_reg[31]'
+INFO: [Synth 8-3886] merging instance 'out_reg[22]' (LD) to 'out_reg[31]'
+INFO: [Synth 8-3886] merging instance 'out_reg[23]' (LD) to 'out_reg[31]'
+INFO: [Synth 8-3886] merging instance 'out_reg[24]' (LD) to 'out_reg[31]'
+INFO: [Synth 8-3886] merging instance 'out_reg[25]' (LD) to 'out_reg[31]'
+INFO: [Synth 8-3886] merging instance 'out_reg[26]' (LD) to 'out_reg[31]'
+INFO: [Synth 8-3886] merging instance 'out_reg[27]' (LD) to 'out_reg[31]'
+INFO: [Synth 8-3886] merging instance 'out_reg[28]' (LD) to 'out_reg[31]'
+INFO: [Synth 8-3886] merging instance 'out_reg[29]' (LD) to 'out_reg[31]'
+INFO: [Synth 8-3886] merging instance 'out_reg[30]' (LD) to 'out_reg[31]'
+WARNING: [Synth 8-3332] Sequential element (out_reg[31]) is unused and will be removed from module SignExt.
+WARNING: [Synth 8-3332] Sequential element (out_reg[14]) is unused and will be removed from module SignExt.
+WARNING: [Synth 8-3332] Sequential element (out_reg[13]) is unused and will be removed from module SignExt.
+WARNING: [Synth 8-3332] Sequential element (out_reg[12]) is unused and will be removed from module SignExt.
+WARNING: [Synth 8-3332] Sequential element (out_reg[11]) is unused and will be removed from module SignExt.
+WARNING: [Synth 8-3332] Sequential element (out_reg[10]) is unused and will be removed from module SignExt.
+WARNING: [Synth 8-3332] Sequential element (out_reg[9]) is unused and will be removed from module SignExt.
+WARNING: [Synth 8-3332] Sequential element (out_reg[8]) is unused and will be removed from module SignExt.
+WARNING: [Synth 8-3332] Sequential element (out_reg[7]) is unused and will be removed from module SignExt.
+WARNING: [Synth 8-3332] Sequential element (out_reg[6]) is unused and will be removed from module SignExt.
+WARNING: [Synth 8-3332] Sequential element (out_reg[5]) is unused and will be removed from module SignExt.
+WARNING: [Synth 8-3332] Sequential element (out_reg[4]) is unused and will be removed from module SignExt.
+WARNING: [Synth 8-3332] Sequential element (out_reg[3]) is unused and will be removed from module SignExt.
+WARNING: [Synth 8-3332] Sequential element (out_reg[2]) is unused and will be removed from module SignExt.
+WARNING: [Synth 8-3332] Sequential element (out_reg[1]) is unused and will be removed from module SignExt.
+WARNING: [Synth 8-3332] Sequential element (out_reg[0]) is unused and will be removed from module SignExt.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 516.227 ; gain = 281.762
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 516.227 ; gain = 281.762
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 516.227 ; gain = 281.762
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 516.227 ; gain = 281.762
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 516.227 ; gain = 281.762
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 516.227 ; gain = 281.762
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 516.227 ; gain = 281.762
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 516.227 ; gain = 281.762
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 516.227 ; gain = 281.762
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |IBUF |    16|
+|2     |OBUF |    32|
++------+-----+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |    48|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 516.227 ; gain = 281.762
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 17 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 516.227 ; gain = 281.762
+Synthesis Optimization Complete : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 516.227 ; gain = 281.762
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 16 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+27 Infos, 17 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 633.918 ; gain = 412.367
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Ray/Desktop/DigLogic/lab_5/proj/lab_5.runs/synth_1/SignExt.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file SignExt_utilization_synth.rpt -pb SignExt_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.046 . Memory (MB): peak = 633.918 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Fri Oct 26 16:40:40 2018...

@@ -1,0 +1,7 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"pc_sim_func_synth.v" \
+"../../../../../../comps/PC/pc_sim.v" \
+
+# Do not sort compile order
+nosort

@@ -1,0 +1,5 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Ray/Desktop/DigLogic/lab_5/proj/lab_5.sim/sim_1/synth/func/xsim/SignExt_sim_func_synth.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SignExt
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Ray/Desktop/DigLogic/lab_5/comps/SignExt/signext_sim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SignExt_sim

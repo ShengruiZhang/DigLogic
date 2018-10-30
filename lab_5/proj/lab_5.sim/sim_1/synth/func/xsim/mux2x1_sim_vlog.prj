@@ -1,0 +1,7 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"mux2x1_sim_func_synth.v" \
+"../../../../../../comps/2x1mux_32/mux2x1_sim.v" \
+
+# Do not sort compile order
+nosort
