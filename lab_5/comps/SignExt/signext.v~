@@ -9,7 +9,7 @@
 // 	If the most significant bit of in (in[15]) = 1, 
 //	create the 32-bit "out" output by making out[15:0] equal to "in" and make other bits to 1
 ////////////////////////////////////////////////////////////////////////////////
-module SignExtension(in, out);
+module SignExt(in, out);
 
     /* A 16-Bit input word */
     input [15:0] in;
@@ -22,22 +22,31 @@ module SignExtension(in, out);
     
     always @* begin
 	    if(in[15] == 0) begin
-		    for(i = 0, i < 16, ++i) begin
+	       out[15:0] = in;
+	       out[31:16] = 16'h0;
+	       
+	       /*
+		    for(i = 0; i < 16; i = i + 1) begin
 			    out[i] <= in[i];
 		    end
 
-		    for(i = 15, i < 32, ++i) begin
+		    for(i = 15; i < 32; i = i + 1) begin
 			    out[i] <= 0;
 		    end
+		    */
 	    end
 	    else if(in[15] == 1) begin
-		    for(i = 0, i < 15, ++i) begin
+	           out[15:0] = in;
+	           out[31:16] = 16'hFFFF;
+              /* 
+		    for(i = 0; i < 16; i = i + 1) begin
 			    out[i] <= in[i];
 		    end
 
-		    for(i = 15, i < 32, ++i) begin
+		    for(i = 15; i < 32; i = i + 1) begin
 			    out[i] <= 1;
 		    end
+		    */
 	    end
     end
 endmodule

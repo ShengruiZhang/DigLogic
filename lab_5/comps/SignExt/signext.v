@@ -18,35 +18,15 @@ module SignExt(in, out);
     output reg [31:0] out;   //using always @
     //output [31:0] out;   //using assign statement
     
-    integer i;
-    
     always @* begin
 	    if(in[15] == 0) begin
 	       out[15:0] = in;
 	       out[31:16] = 16'h0;
 	       
-	       /*
-		    for(i = 0; i < 16; i = i + 1) begin
-			    out[i] <= in[i];
-		    end
-
-		    for(i = 15; i < 32; i = i + 1) begin
-			    out[i] <= 0;
-		    end
-		    */
 	    end
 	    else if(in[15] == 1) begin
 	           out[15:0] = in;
 	           out[31:16] = 16'hFFFF;
-              /* 
-		    for(i = 0; i < 16; i = i + 1) begin
-			    out[i] <= in[i];
-		    end
-
-		    for(i = 15; i < 32; i = i + 1) begin
-			    out[i] <= 1;
-		    end
-		    */
 	    end
     end
 endmodule

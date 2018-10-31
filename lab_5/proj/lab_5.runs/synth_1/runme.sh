@@ -40,4 +40,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log SignExt.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source SignExt.tcl
+EAStep vivado -log InstructionMemory.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source InstructionMemory.tcl

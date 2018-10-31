@@ -1,7 +1,6 @@
 `timescale 1ns / 1ps
 
 ////////////////////////////////////////////////////////////////////////////////
-// Last Edits: Nirmal Kumbhare, Ali Akoglu
 // 
 // Module - data_memory.v
 // Description - 32-Bit wide data memory.
@@ -35,17 +34,20 @@
 module DataMemory(Address, WriteData, Clk, MemWrite, MemRead, ReadData); 
 
     input [31:0] Address; 	// Input Address 
-    input [31:0] WriteData; // Data that needs to be written into the address 
+    input [31:0] WriteData; 	// Data that needs to be written into the address 
+
     input Clk;
-    input MemWrite; 		// Control signal for memory write 
-    input MemRead; 			// Control signal for memory read 
+    input MemWrite; 		// Control signal for memory write aka. ENABLE
+    input MemRead; 		// Control signal for memory read 
 
-    output reg[31:0] ReadData; // Contents of memory location at Address
+    output reg[31:0] ReadData; 	// Contents of memory location at Address
 
     
-    reg [31:0] memory [0:1023];
+    reg [31:0] memory [0:1023];	// This memory is 32-bit deep, contains 1024 individual elements
     
-	always @(posedge Clk) begin
+	always @(posedge Clk) begin	
+				// Write Data into memory at rising edge of
+				// the clock
         if (MemWrite == 1'b1) begin
             memory[Address[11:2]] <= WriteData;
         end
