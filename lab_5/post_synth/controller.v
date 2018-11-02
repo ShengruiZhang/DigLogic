@@ -88,6 +88,16 @@ module Controller(Op, func, RegDst, RegWrite, ALUSrc, MemRead, MemWrite, MemtoRe
 
 			end
 
-
 			6'b001000: begin
+				ALUSrc <= 1;
+				RegDst <= 0;
+				ALUOp <= 0000;
+			end
 
+			6'b001101: begin
+				ALUSrc <= 1;
+				RegDst <= 0;
+				ALUOp <= 0100;
+			end
+		endcase
+		endmodule
