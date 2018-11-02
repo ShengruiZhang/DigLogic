@@ -27,9 +27,6 @@ module InstructionMemory_tb();
 	    Address <= 32'h0000_000C;
 	    #100;
 	    Address <= 32'h0000_0010;
-:q
-:q
-:wq
 	    #100;
     end
 

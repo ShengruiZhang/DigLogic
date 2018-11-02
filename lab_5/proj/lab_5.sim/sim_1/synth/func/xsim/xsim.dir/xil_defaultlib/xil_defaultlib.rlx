@@ -3,8 +3,8 @@
 Jun 14 2018
 20:41:02
 C:/Users/Ray/Desktop/DigLogic/lab_5/comps/2x1mux_32/mux2x1_sim.v,1540588340,verilog,,,,mux2x1_sim,,,,,,,,
-C:/Users/Ray/Desktop/DigLogic/lab_5/comps/DataMemory/DataMemory_sim.v,1541025970,verilog,,,,DataMemory_tb,,,,,,,,
+C:/Users/Ray/Desktop/DigLogic/lab_5/comps/DataMemory/DataMemory_sim.v,1541026254,verilog,,,,DataMemory_tb,,,,,,,,
 C:/Users/Ray/Desktop/DigLogic/lab_5/comps/InstrMemory/InstrMemory_sim.v,1541027290,verilog,,,,InstructionMemory_tb,,,,,,,,
 C:/Users/Ray/Desktop/DigLogic/lab_5/comps/PC/pc_sim.v,1540595297,verilog,,,,pc_sim,,,,,,,,
 C:/Users/Ray/Desktop/DigLogic/lab_5/comps/SignExt/signext_sim.v,1540596616,verilog,,,,SignExt_sim,,,,,,,,
-C:/Users/Ray/Desktop/DigLogic/lab_5/proj/lab_5.sim/sim_1/synth/func/xsim/InstructionMemory_tb_func_synth.v,1541027357,verilog,,C:/Users/Ray/Desktop/DigLogic/lab_5/comps/InstrMemory/InstrMemory_sim.v,,InstructionMemory;glbl,,,,,,,,
+C:/Users/Ray/Desktop/DigLogic/lab_5/proj/lab_5.sim/sim_1/synth/func/xsim/DataMemory_tb_func_synth.v,1541193093,verilog,,C:/Users/Ray/Desktop/DigLogic/lab_5/comps/DataMemory/DataMemory_sim.v,,DataMemory;glbl,,,,,,,,
