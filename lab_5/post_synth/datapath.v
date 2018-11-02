@@ -34,7 +34,7 @@ module Datapath_top(Clk, Reset, MuxOut_DataMem);
 
     // Wires for Register
     wire [31:0] _RegRead1;
-    wire [31:0] _RegWrite;
+    wire [31:0] _WriteReg;
     wire [31:0] _RegData1;
     wire [31:0] _RegData2;
     
@@ -53,11 +53,13 @@ module Datapath_top(Clk, Reset, MuxOut_DataMem);
     // Wires for ALU3
     wire [31:0] _shl2toalu3;
     wire [31:0] _alu3_oup;
+    
+    Controller c1(_Instr[31:26], _Instr[5:0], _RegDst, _RegWrite, _ALUSrc, _MemRead, _MemWrite, _MemtoReg, _PCSrc, _ALUOp, _shl_sel, _shr_sel);
 
-    pc c1(_m6toPC, _PCResult, Reset, Clk);
+    pc pc1(_m6toPC, _PCResult, Reset, Clk);
     InstructionMemory i1(_PCResult, _Instr);
-    mux2x1 m1(_RegRead1, {27'b0, _Instr[20:16]}, {27'b0, _Instr[25:21], _shl_sel);
-    mux2x1 m2(_RegWrite, {27'b0, _Instr[15:11]}, {27'b0, _Instr[20:16], _RegDst);
+    mux2x1 m1(_RegRead1, {27'b0, _Instr[20:16]}, {27'b0, _Instr[25:21]}, _shl_sel);
+    mux2x1 m2(_WriteReg, {27'b0, _Instr[15:11]}, {27'b0, _Instr[20:16]}, _RegDst);
     mux2x1 m3(_m3tom4, _se1_out, _RegData2, _ALUSrc);
     mux2x1 m4(_m4toALU, {27'b0, _Instr[10:6]}, _m3tom4, _shr_sel);
     mux2x1 m5(MuxOut_DataMem, _dm1tom5, _ALU_oup, _MemtoReg);
@@ -78,6 +80,8 @@ module Datapath_top(Clk, Reset, MuxOut_DataMem);
     //--// RegisterFile. The purpose of this to show you how to  
     //--// retain the signal for post-synthesis simulation
 
-    RegisterFile a4(_RegRead1[4:0], _Instr[20:16], _RegWrite[4:0], MuxOut_DataMem, _RegWrite, Clk, _RegData1, _RegData2,   
+    RegisterFile a4(_RegRead1[4:0], _Instr[20:16], _RegWrite, MuxOut_DataMem, _WriteReg, Clk, _RegData1, _RegData2,   
     	 debug_Reg8, debug_Reg16, debug_Reg17, debug_Reg18, 
       debug_Reg19);
+
+endmodule
