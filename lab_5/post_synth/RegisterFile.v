@@ -22,8 +22,9 @@ module RegisterFile(ReadRegister1, ReadRegister2, WriteRegister,
  	
 	
    //////////////////////////////////////////////////
-     This is where you write your code - you should have this
+   /*  This is where you write your code - you should have this
      from part 1 of lab 5
+     */
    ///////////////////////////////////////////////////
 		
 
