@@ -75,71 +75,81 @@ module ALU32Bit(ALUControl, A, B, ALUResult, Zero);
 
 	output reg [31:0] ALUResult;	// answer
 	output reg Zero;	    // Zero=1 if ALUResult == 0
-	integer i, count;
+	integer i;
     
     always @* begin
         Zero <= 0;
         case(ALUControl)
             4'b0000: begin
-                ALUResult = A+B;
+                ALUResult <= A+B;
             end
             4'b0001: begin
-                ALUResult = A-B;
+                ALUResult <= A-B;
             end
             4'b0010: begin
-                ALUResult = A*B;
+                ALUResult <= A*B;
             end
             4'b0011: begin
-                ALUResult = A&B;
+                ALUResult <= A&B;
             end
             4'b0100: begin
-                ALUResult = A|B;
+                ALUResult <= A|B;
             end
             4'b0101: begin
                 if(A<B) begin
-                    ALUResult = 32'h000000001;
+                    ALUResult <= 32'h000000001;
+                end
+                else begin
+                    ALUResult <=0;
                 end
             end
             4'b0110: begin
                 if(A==B) begin
-                    ALUResult = 32'h000000001;
+                    ALUResult <= 32'h000000001;
+                end
+                else begin
+                    ALUResult <= 0;
                 end
             end
             4'b0111: begin
                 if(A!=B) begin
-                    ALUResult = 32'h000000001;
+                    ALUResult <= 32'h000000001;
+                end
+                else begin
+                    ALUResult <= 0;
                 end
             end
             4'b1000: begin
-                ALUResult = A << B;
+                ALUResult <= A << B;
             end
             4'b1001: begin
-                ALUResult = A >> B;
+                ALUResult <= A >> B;
             end
             4'b1010: begin
-                ALUResult = ((A >> B) | (A << (32-B)));
+                ALUResult <= ((A >> B) | (A << (32-B)));
             end
             4'b1011: begin
-                count = 0;
                 for(i = 0; i < 32; i = i+1) begin
-                    if(ALUResult[i]==1) begin
-                        count = count + 1;
-                    end
+                    if(A[31-i] == 0) begin
+                        ALUResult = i;
+                        i = 40;
+                    end 
                     else begin
-                        i = 32;
-                    end
+                        ALUResult = 32;
+                    end       
                 end
+                
             end
             4'b1100: begin
-                count = 0;
-                for(i = 0; i < 32; i = i+1) begin
-                    if(ALUResult[i]==0) begin
-                        count = count + 1;
-                    end
+               for(i = 0; i < 32; i = i+1) begin
+                    if(A[31-i] == 1) begin
+                        ALUResult = i;
+                        i = 40;
+                    end  
                     else begin
-                        i = 32;
-                    end
-                end
+                        ALUResult = 32;
+                    end      
+                end 
             end
         endcase 
         if(ALUResult == 0) begin
