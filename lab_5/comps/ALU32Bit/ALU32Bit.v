@@ -75,7 +75,7 @@ module ALU32Bit(ALUControl, A, B, ALUResult, Zero);
 
 	output reg [31:0] ALUResult;	// answer
 	output reg Zero;	    // Zero=1 if ALUResult == 0
-	integer i;
+	integer i, stop;
     
     always @* begin
         Zero <= 0;
@@ -129,29 +129,40 @@ module ALU32Bit(ALUControl, A, B, ALUResult, Zero);
                 ALUResult <= ((A >> B) | (A << (32-B)));
             end
             4'b1011: begin
-                for(i = 0; i < 32; i = i+1) begin
-                    if(A[31-i] == 0) begin
+                stop = 0;
+                i = 0;
+                while((i<32) || !(stop)) begin
+                    if(A[31-i] != 1) begin
                         ALUResult = i;
-                        i = 40;
-                    end 
-                    else begin
-                        ALUResult = 32;
-                    end       
+                        stop = 1;
+                    end
+                    i = i + 1;
+                end
+                if(!stop) begin
+                    ALUResult = 32;
                 end
                 
-            end
-            4'b1100: begin
-               for(i = 0; i < 32; i = i+1) begin
-                    if(A[31-i] == 1) begin
+           end
+           
+           4'b1100: begin
+               stop = 0;
+               i = 0;
+               while((i<32) || !(stop)) begin
+                    if(A[31-i] != 1) begin
                         ALUResult = i;
-                        i = 40;
-                    end  
-                    else begin
-                        ALUResult = 32;
-                    end      
-                end 
+                        stop = 1;
+                    end
+                    i = i + 1;
+               end
+               if(!stop) begin
+                    ALUResult = 32;
+               end
             end
-        endcase 
+            
+            default: begin
+            end
+        endcase
+		
         if(ALUResult == 0) begin
             Zero <= 1;   
         end      

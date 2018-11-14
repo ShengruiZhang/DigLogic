@@ -45,23 +45,23 @@ module InstructionMemory(Address, Instruction);
         reg [31:0] memory [0:127];
         
         
-        initial begin                   //need to iniitalize this for the code!!!
-            memory[0] = 32'h2010000e;    //    main:   addi   $s0, $zero, 14                  #so = RegFile[16] = 14  (0+14)
-            memory[1] = 32'h2011000f;    //        addi    $s1, $zero, 15               #s1 = RegFile[17] = 15  (0+15)
-            memory[2] = 32'h2012001d;    //        addi    $s2, $zero, 29               #s2 = RegFile[18] = 29  (0+29)
-            memory[3] = 32'h2013fff1;    //        addi    $s3, $zero, -15              #s3 = RegFile[19] = -15 (0+-15)
-            memory[4] = 32'h02324020;    //        add     $t0, $s1, $s2                #t0 = RegFile[8] = 44  (15+29)
-            memory[5] = 32'h02504024;    //        and     $t0, $s2, $s0                #t0 = 12  (29 AND 14 => 11101 AND 01110 = 01100 = 12)
-            memory[6] = 32'h72114002;    //        mul     $t0, $s0, $s1                #t0 = 210 (14*15)
-            memory[7] = 32'h02504025;    //        or      $t0, $s2, $s0                #t0 = 31  (29 OR 14 => 11101 OR 01110 = 11111 = 31) 
-            memory[8] = 32'h36080010;    //        ori     $t0, $s0, 16                 #t0 = 30  (14 OR 16 = 01110 OR 10000 = 11110 = 30)
-            memory[9] = 32'h02124022;    //        sub     $t0, $s0, $s2                #t0 = -15 (14-29)  
-            memory[10] = 32'h72604021;    //        clo    $t0, $s3                     #t0 = 28  (count leading 1 of s3 = -15 =  1111 1111 1111 1111 1111 1111 1111 0001)
-            memory[11] = 32'h72404020;    //        clz    $t0, $s2                     #t0 = 27  (count leading 0 of s2 = 29 = 0000 0000 0000 0000 0000 0000 0001 1101)
-            memory[12] = 32'h0211402a;    //        slt    $t0, $s0, $s1                #t0 = 1
-            memory[13] = 32'h0230402a;    //        slt    $t0, $s1, $s0                #t0 = 0
-            memory[14] = 32'h00114080;    //        sll    $t0, $s1, 2                  #t0 = 60  (15*4)
-            memory[15] = 32'h001240c2;    //        srl    $t0, $s2, 3                  #t0 = 3   (29/8)
+        initial begin                     //need to iniitalize this for the code!!!
+            memory[0]  = 32'h2010000e;    //    main:   addi   $s0, $zero, 14           #so = RegFile[16] = 14  (0+14)
+            memory[1]  = 32'h2011000f;    //    addi    $s1, $zero, 15              #s1 = RegFile[17] = 15  (0+15)
+            memory[2]  = 32'h2012001d;    //    addi    $s2, $zero, 29              #s2 = RegFile[18] = 29  (0+29)
+            memory[3]  = 32'h2013fff1;    //    addi    $s3, $zero, -15             #s3 = RegFile[19] = -15 (0+-15)
+            memory[4]  = 32'h02324020;    //    add     $t0, $s1, $s2               #t0 = RegFile[8] = 44  (15+29)
+            memory[5]  = 32'h02504024;    //    and     $t0, $s2, $s0               #t0 = 12  (29 AND 14 => 11101 AND 01110 = 01100 = 12)
+            memory[6]  = 32'h72114002;    //    mul     $t0, $s0, $s1               #t0 = 210 (14*15)
+            memory[7]  = 32'h02504025;    //    or      $t0, $s2, $s0               #t0 = 31  (29 OR 14 => 11101 OR 01110 = 11111 = 31) 
+            memory[8]  = 32'h36080010;    //    ori     $t0, $s0, 16                #t0 = 30  (14 OR 16 = 01110 OR 10000 = 11110 = 30)
+            memory[9]  = 32'h02124022;    //    sub     $t0, $s0, $s2               #t0 = -15 (14-29)  
+            memory[10] = 32'h72604021;    //    clo    $t0, $s3                     #t0 = 28  (count leading 1 of s3 = -15 =  1111 1111 1111 1111 1111 1111 1111 0001)
+            memory[11] = 32'h72404020;    //    clz    $t0, $s2                     #t0 = 27  (count leading 0 of s2 = 29 = 0000 0000 0000 0000 0000 0000 0001 1101)
+            memory[12] = 32'h0211402a;    //    slt    $t0, $s0, $s1                #t0 = 1
+            memory[13] = 32'h0230402a;    //    slt    $t0, $s1, $s0                #t0 = 0
+            memory[14] = 32'h00114080;    //    sll    $t0, $s1, 2                  #t0 = 60  (15*4)
+            memory[15] = 32'h001240c2;    //    srl    $t0, $s2, 3                  #t0 = 3   (29/8)
            
         end
         

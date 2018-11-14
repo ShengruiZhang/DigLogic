@@ -14,7 +14,7 @@ module mux2x1(out, inA, inB, sel);
     input [31:0] inB;
     input sel;
 
-    always @(sel) begin
+    always @(*) begin
 	    if(sel == 0)	out <= inB;
 	    else if (sel == 1)	out <= inA;
     end
