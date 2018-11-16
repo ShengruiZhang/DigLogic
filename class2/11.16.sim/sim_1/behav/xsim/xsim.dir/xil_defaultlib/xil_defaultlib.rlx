@@ -1,0 +1,11 @@
+0.6
+2018.2
+Jun 14 2018
+20:41:02
+C:/Users/Ray/Desktop/DigLogic/class2/11.16.sim/sim_1/behav/xsim/glbl.v,1529022455,verilog,,,,glbl,,,,,,,,
+C:/Users/Ray/Desktop/DigLogic/class2/Comparator_9bits.v,1542395753,verilog,,C:/Users/Ray/Desktop/DigLogic/class2/Controller.v,,Comparator_9bits,,,,,,,,
+C:/Users/Ray/Desktop/DigLogic/class2/Controller.v,1542397856,verilog,,C:/Users/Ray/Desktop/DigLogic/class2/HLSM_MaxMin_Struct.v,,Controller,,,,,,,,
+C:/Users/Ray/Desktop/DigLogic/class2/HLSM_MaxMin_Struct.v,1542411390,verilog,,C:/Users/Ray/Desktop/DigLogic/class2/Reg256_8.v,,HLSM_MaxMin_Struct,,,,,,,,
+C:/Users/Ray/Desktop/DigLogic/class2/HLSM_MinMax_tb.v,1542409462,verilog,,,,HLSM_MinMax_tb,,,,,,,,
+C:/Users/Ray/Desktop/DigLogic/class2/Reg256_8.v,1542395761,verilog,,C:/Users/Ray/Desktop/DigLogic/class2/Register9bits.v,,Register256_8,,,,,,,,
+C:/Users/Ray/Desktop/DigLogic/class2/Register9bits.v,1542395762,verilog,,C:/Users/Ray/Desktop/DigLogic/class2/HLSM_MinMax_tb.v,,Register9bits,,,,,,,,

@@ -1,0 +1,6 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Ray/Desktop/DigLogic/class/HLSM_MaxMin.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module HLSM_MaxMin
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Ray/Desktop/DigLogic/class/Reg256_8.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Register256_8
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Ray/Desktop/DigLogic/class/HLSM_MinMax_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module HLSM_MinMax_tb

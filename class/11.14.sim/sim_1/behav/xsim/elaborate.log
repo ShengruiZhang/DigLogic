@@ -1,0 +1,14 @@
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto ff6c2d77c056416da40aecaf1206bd4b --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot HLSM_MinMax_tb_behav xil_defaultlib.HLSM_MinMax_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Register256_8
+Compiling module xil_defaultlib.HLSM_MaxMin
+Compiling module xil_defaultlib.HLSM_MinMax_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot HLSM_MinMax_tb_behav

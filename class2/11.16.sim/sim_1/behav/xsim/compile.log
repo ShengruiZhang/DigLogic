@@ -1,0 +1,13 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Ray/Desktop/DigLogic/class2/Comparator_9bits.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Comparator_9bits
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Ray/Desktop/DigLogic/class2/Controller.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Controller
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Ray/Desktop/DigLogic/class2/HLSM_MaxMin_Struct.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module HLSM_MaxMin_Struct
+INFO: [VRFC 10-2458] undeclared symbol R_en, assumed default net type wire [C:/Users/Ray/Desktop/DigLogic/class2/HLSM_MaxMin_Struct.v:15]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Ray/Desktop/DigLogic/class2/Reg256_8.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Register256_8
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Ray/Desktop/DigLogic/class2/Register9bits.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Register9bits
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Ray/Desktop/DigLogic/class2/HLSM_MinMax_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module HLSM_MinMax_tb

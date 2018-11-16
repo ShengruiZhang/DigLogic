@@ -1,0 +1,102 @@
+`timescale 1ns / 1ps
+
+module HLSM_MaxMin(Clk, Rst, go, max_diff, done);
+    input Clk, Rst, go;
+    output reg [7:0] max_diff;
+    output reg done;
+    
+    //to implement states
+    reg [3:0] state, statenext;
+    parameter sA = 0, sB = 1, sC = 2, sD = 3, sE = 4;
+    parameter sF = 5, sG = 6, sH = 7, sI = 8;
+        
+    //local storage
+    reg [8:0] i;
+    reg [7:0] min, max; 
+       
+    //register file
+    reg R_en;
+    wire [7:0] a_i;
+    //Register256_8 (R_Addr, W_Addr, R_en, W_en,R_Data, W_Data, Clk, Rst);
+    Register256_8 a1(i[7:0],  8'b0,  R_en, 1'b0 , a_i , 8'b0  , Clk, Rst);
+  
+    always @ (posedge Clk)
+    begin
+            if(Rst == 1) begin
+                state <= sA;
+            end
+            else begin
+                state <= statenext;
+           case (state) 
+			sB: begin
+				i <= 0;
+				max<= 0;
+				min <= 255;
+			end
+			sE: begin
+				min <= 	a_i;
+			end
+
+			sG: begin
+				max <= a_i;
+			end
+
+			sH: begin
+				i <= i+1;
+			end
+
+			sI: begin
+				max_diff <= max - min;
+			end
+			endcase
+        end
+        end
+        
+        always @(state, go, i, a_i, min, max)
+        begin
+            R_en <= 0;
+            done <= 0;
+            case(state)
+                sA: begin
+                    if(go == 1) statenext <= sB;
+                    else statenext <= sA;
+                end
+                sB: begin
+                    done <= 0;
+                    statenext <= sC;
+                end
+                sC: begin
+			if(~(i<256)) statenext <= sI;
+			else statenext <= sD;
+                end
+                sD: begin
+			R_en <= 1;
+			if(a_i<min) statenext <= sE;
+			else statenext <= sF;
+                end
+                sE: begin
+			R_en <= 1;
+			statenext <= sF;
+                end
+                sF: begin
+			R_en <= 1;
+			if(a_i>max) statenext <= sG;
+			else statenext <= sH;
+                end
+                sG: begin
+			R_en <= 1;
+			statenext <= sH;
+                end  
+                sH: begin
+                     statenext <= sC;
+                end 
+                sI: begin
+			statenext <= sA;
+			done <= 1;
+                end                
+                default: begin
+                    statenext <= sA;
+                end                                                                  
+            endcase
+          end       
+endmodule

@@ -1,0 +1,14 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../Comparator_9bits.v" \
+"../../../../Controller.v" \
+"../../../../HLSM_MaxMin_Struct.v" \
+"../../../../Reg256_8.v" \
+"../../../../Register9bits.v" \
+"../../../../HLSM_MinMax_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

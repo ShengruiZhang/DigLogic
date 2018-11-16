@@ -1,0 +1,1 @@
+-wto "ff6c2d77c056416da40aecaf1206bd4b" --incr --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "unisims_ver" -L "unimacro_ver" -L "secureip" --snapshot "HLSM_MaxMin_Struct_behav" "xil_defaultlib.HLSM_MaxMin_Struct" "xil_defaultlib.glbl" -log "elaborate.log" 
