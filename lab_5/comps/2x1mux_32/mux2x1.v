@@ -6,7 +6,9 @@
 //              - sel = 0, out = inB
 ////////////////////////////////////////////////////////////////////////////////
 
-module mux2x1(out, inA, inB, sel);
+module mux2x1	(out, inA, inB, sel);
+//				(out, A, B, sel)
+//				0 -> B; 1 -> A
 
     output reg [31:0] out;
     

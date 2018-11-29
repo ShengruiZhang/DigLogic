@@ -11,18 +11,18 @@ module Controller(Op, func, RegDst, RegWrite, ALUSrc, MemRead, MemWrite, MemtoRe
 	
 	always @* begin
 
-	ALUSrc <= 0;
-
-	RegDst <= 1;
-	RegWrite <= 1;
+		ALUSrc		<= 0;
 	
-	MemRead <= 0;
-	MemWrite <= 0;
-	MemtoReg <= 0;
-	PCSrc <= 0;
-
-	shl_sel <= 0;
-	shr_sel <= 0;
+		RegDst		<= 1;
+		RegWrite	<= 1;
+		
+		MemRead		<= 0;
+		MemWrite	<= 0;
+		MemtoReg	<= 0;
+		PCSrc		<= 0;
+	
+		shl_sel		<= 0;
+		shr_sel 	<= 0;
 
 		case(Op)
 			6'b00000000: begin
@@ -30,35 +30,35 @@ module Controller(Op, func, RegDst, RegWrite, ALUSrc, MemRead, MemWrite, MemtoRe
 				if(func == 6'b100000) begin
 					ALUOp <= 4'b0000;
 					shl_sel <= 0;
-                    shr_sel <= 0;
+					shr_sel <= 0;
 				end
 
 				// SUB
 				else if(func == 6'b100010) begin
 					ALUOp <= 4'b0001;
 					shl_sel <= 0;
-                    shr_sel <= 0;
+					shr_sel <= 0;
 				end
 
 				// AND
 				else if(func == 6'b100100) begin
 					ALUOp <= 4'b0011;
 					shl_sel <= 0;
-                    shr_sel <= 0;
+					shr_sel <= 0;
 				end
 
 				// ORR
 				else if(func == 6'b100101) begin
 					ALUOp <= 4'b0100;
 					shl_sel <= 0;
-                    shr_sel <= 0;
+					shr_sel <= 0;
 				end
 
 				// SLT
 				else if(func == 6'b101010) begin
 					ALUOp <= 4'b0101;
 					shl_sel <= 0;
-                    shr_sel <= 0;
+					shr_sel <= 0;
 				end
 
 				// SLL
@@ -83,28 +83,28 @@ module Controller(Op, func, RegDst, RegWrite, ALUSrc, MemRead, MemWrite, MemtoRe
 				if(func == 6'b10001) begin
 					ALUOp <= 4'b1011;
 					shl_sel <= 0;
-                    shr_sel <= 0;
+					shr_sel <= 0;
 				end
 
 				// CLZ
 				else if(func == 6'b100000) begin
 					ALUOp <= 4'b1100;
 					shl_sel <= 0;
-                    shr_sel <= 0;
+					shr_sel <= 0;
 				end
 
 				// MUL
 				else if(func == 6'b000010) begin
 					ALUOp <= 4'b0010;
 					shl_sel <= 0;
-                    shr_sel <= 0;
+					shr_sel <= 0;
 				end
 
 				// ROT
 				else if(func == 6'b000110) begin
 					ALUOp <= 4'b1010;
 					shl_sel <= 0;
-                    shr_sel <= 0;
+					shr_sel <= 0;
 				end
 
 			end
@@ -114,7 +114,7 @@ module Controller(Op, func, RegDst, RegWrite, ALUSrc, MemRead, MemWrite, MemtoRe
 				RegDst <= 0;
 				ALUOp <= 4'b0000;
 				shl_sel <= 0;
-                shr_sel <= 0;
+				shr_sel <= 0;
 			end
 
 			6'b001101: begin
@@ -122,10 +122,44 @@ module Controller(Op, func, RegDst, RegWrite, ALUSrc, MemRead, MemWrite, MemtoRe
 				RegDst <= 0;
 				ALUOp <= 4'b0100;
 				shl_sel <= 0;
-                shr_sel <= 0;
+				shr_sel <= 0;
 			end
-		    default: begin 
-		    end
+			
+			// lw	Load word
+			6'b100011: begin
+				RegDst		<= 0;
+				RegWrite	<= 0;
+				ALUSrc		<= 1;
+				ALUOp		<= 4'b0000;
+				MemRead		<= 1;
+				MemWrite	<= 0;
+				MemtoReg	<= 1;
+				PCSrc		<= 0;
+				shl_sel		<= 0;
+				shr_sel		<= 0;
+			end
+			
+			// sw	Store word
+			6'b101011: begin
+
+				RegDst		<= x;
+				RegWrite	<= 0;
+				ALUSrc		<= 0;
+				ALUOp		<= 4'b0111;
+				MemRead		<= 0;
+				MemWrite	<= 0;
+				MemtoReg	<= x;
+				PCSrc		<= x;
+				
+				//	0 -> B; 1 -> A
+				shl_sel		<= x;
+				shr_sel		<= 0;
+			end
+
+
+			default: begin 
+			end
+			
 		endcase
-		end
+	end
 endmodule
