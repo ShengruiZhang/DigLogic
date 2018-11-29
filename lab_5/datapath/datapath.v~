@@ -70,7 +70,7 @@ module Datapath_top(Clk, Reset, MuxOut_DataMem);
 	PCAdder				pcadd1(PCResult, pcadder_oup);
 	
 	// This ALU always does addition, it is not controlled by the controller
-	ALU32Bit			alu3(4'b0000, pcadder_oup, (se1_out << 2), alu3_oup);
+	ALU32Bit			alu3(4'b0000, pcadder_oup, ((se1_out << 2) * 4), alu3_oup);
 	
 	Mux32Bit2To1		m6(m6toPC, alu3_oup, pcadder_oup, PCSrc);
 	
@@ -83,6 +83,12 @@ module Datapath_top(Clk, Reset, MuxOut_DataMem);
 	begin
 			if(ALU_oup == 1) begin
 					PCSrc <= 1;
+			end
+			else
+			begin
+					PCSrc <= 0;
+			end
+	end
 
 
 endmodule

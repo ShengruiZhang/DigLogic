@@ -11,18 +11,18 @@ module Controller(Op, func, RegDst, RegWrite, ALUSrc, MemRead, MemWrite, MemtoRe
 	
 	always @* begin
 
-		ALUSrc <= 0;
+		ALUSrc		<= 0;
 	
-		RegDst <= 1;
-		RegWrite <= 1;
+		RegDst		<= 1;
+		RegWrite	<= 1;
 		
-		MemRead <= 0;
-		MemWrite <= 0;
-		MemtoReg <= 0;
-		PCSrc <= 0;
+		MemRead		<= 0;
+		MemWrite	<= 0;
+		MemtoReg	<= 0;
+		PCSrc		<= 0;
 	
-		shl_sel <= 0;
-		shr_sel <= 0;
+		shl_sel		<= 0;
+		shr_sel 	<= 0;
 
 		case(Op)
 			6'b00000000: begin
@@ -136,22 +136,41 @@ module Controller(Op, func, RegDst, RegWrite, ALUSrc, MemRead, MemWrite, MemtoRe
 				MemtoReg	<= 1;
 				PCSrc		<= 0;
 				shl_sel		<= 0;
-				shl_sel		<= 0;
+				shr_sel		<= 0;
 			end
 			
 			// sw	Store word
 			6'b101011: begin
 
-				RegDst		<= x;
+				RegDst		<= 0;
 				RegWrite	<= 0;
 				ALUSrc		<= 1;
 				ALUOp		<= 4'b0000;
 				MemRead		<= 0;
 				MemWrite	<= 1;
-				MemtoReg	<= x;
+				MemtoReg	<= 0;
 				PCSrc		<= 0;
+				
+				//	0 -> B; 1 -> A
 				shl_sel		<= 0;
+				shr_sel		<= 0;
+			end
+
+			// bne	branch if not equal to
+			6'b000101: begin
+
+				RegDst		<= 0;
+				RegWrite	<= 0;
+				ALUSrc		<= 0;
+				ALUOp		<= 4'b0111;
+				MemRead		<= 0;
+				MemWrite	<= 0;
+				MemtoReg	<= 0;
+				PCSrc		<= 0;
+				
+				//	0 -> B; 1 -> A
 				shl_sel		<= 0;
+				shr_sel		<= 0;
 			end
 
 

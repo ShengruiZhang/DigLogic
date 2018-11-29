@@ -1,24 +1,4 @@
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 11/08/2018 08:55:12 PM
-// Design Name: 
-// Module Name: datapath_tb
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
-
 
 module datapath_tb();
     reg Clk_tb, Rst_tb;
@@ -36,6 +16,5 @@ module datapath_tb();
         #50
         Rst_tb <= 0;
     end
-    
-    
+        
 endmodule
