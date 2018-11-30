@@ -1,6 +1,7 @@
 # compile verilog/system verilog design source files
 verilog xil_defaultlib  \
 "vending_sim_func_synth.v" \
+"../../../../../vending.v" \
 "../../../../../vending_sim.v" \
 
 # Do not sort compile order

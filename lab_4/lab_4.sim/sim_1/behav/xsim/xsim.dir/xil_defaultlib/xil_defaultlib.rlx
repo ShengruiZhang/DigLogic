@@ -1,9 +1,7 @@
 0.6
 2018.2
-Jul 26 2018
-19:36:16
-C:/Users/shengruizhang/Desktop/DigLogic-master/lab_4/button_sync.v,1539385502,verilog,,C:/Users/shengruizhang/Desktop/DigLogic-master/lab_4/button_synv_sim.v,,BTN_sync,,,,,,,,
-C:/Users/shengruizhang/Desktop/DigLogic-master/lab_4/button_synv_sim.v,1539385811,verilog,,,,button_sim,,,,,,,,
-C:/Users/shengruizhang/Desktop/DigLogic-master/lab_4/lab_4.sim/sim_1/behav/xsim/glbl.v,1539381480,verilog,,,,glbl,,,,,,,,
-C:/Users/shengruizhang/Desktop/DigLogic-master/lab_4/vending.v,1539386338,verilog,,C:/Users/shengruizhang/Desktop/DigLogic-master/lab_4/vending_sim.v,,vending,,,,,,,,
-C:/Users/shengruizhang/Desktop/DigLogic-master/lab_4/vending_sim.v,1539386879,verilog,,,,vending_sim,,,,,,,,
+Jun 14 2018
+20:41:02
+C:/Users/Ray/Desktop/DigLogic/lab_4/lab_4.sim/sim_1/behav/xsim/glbl.v,1539381480,verilog,,,,glbl,,,,,,,,
+C:/Users/Ray/Desktop/DigLogic/lab_4/vending.v,1539575915,verilog,,C:/Users/Ray/Desktop/DigLogic/lab_4/vending_sim.v,,vending,,,,,,,,
+C:/Users/Ray/Desktop/DigLogic/lab_4/vending_sim.v,1539387362,verilog,,,,vending_sim,,,,,,,,

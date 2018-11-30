@@ -28,7 +28,7 @@ module LabExam(Clk, Rst, go, count, done);
 
 	// Use RegisterFile
 	//RegFile16x8 rf1(R_Addr, W_Addr, R_en, W_en, R_Data, W_Data,   Clk, Rst);
-	RegFile16x8 rf1(i[3:0],   i[3:0], R_en, W_en,   A, Write_Data, Clk, Rst);
+	RegFile16x8 rf1(i[3:0], i[3:0], R_en, W_en, A, Write_Data, Clk, Rst);
 	
 	// Things need to be updated at pos clk
 	always @(posedge Clk)
@@ -48,11 +48,11 @@ module LabExam(Clk, Rst, go, count, done);
 				STBY: begin
 					// stand-by state after go, reset all
 					// local storage
-					done <= 0;
+					//done <= 0;
 					count <= 0;
 					i <= 0;
-					R_en <= 0;
-					W_en <= 0;
+					//R_en <= 0;
+					//W_en <= 0;
 				end
 
 				SET_TEMP: begin
@@ -85,13 +85,14 @@ module LabExam(Clk, Rst, go, count, done);
 
 
 	// Things need to be updated upon other change of variables
-	always @(state, go, i, count, temp) // The conditions may have issues
+	always @(state, go, i, count) // The conditions may have issues
 	begin
 		R_en	<= 0;
 		W_en	<= 0;
 
 		case(state)
 			INIT: begin
+				done <= 0;
 				if(go == 1) statenext <= STBY;
 				else statenext <= INIT;
 			end
