@@ -1,0 +1,7 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"LabExam_sim_func_synth.v" \
+"../../../../../../datapath_sim.v" \
+
+# Do not sort compile order
+nosort

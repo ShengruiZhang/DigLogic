@@ -1,0 +1,6 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Ray/Desktop/DigLogic/lab_practical_3/proj/lab_exam.sim/sim_1/synth/func/xsim/LabExam_sim_func_synth.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LabExam
+INFO: [VRFC 10-311] analyzing module RegFile16x8
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Ray/Desktop/DigLogic/lab_practical_3/datapath_sim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LabExam_sim

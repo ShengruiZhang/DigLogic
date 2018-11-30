@@ -6,7 +6,7 @@ module LabExam(Clk, Rst, go, count, done);
 	input go;
 
 	output reg [6:0] count;
-	output done;
+	output reg done;
 
 	// Local storage
 	reg [4:0] i;
@@ -14,7 +14,7 @@ module LabExam(Clk, Rst, go, count, done);
 
 	// Wires
 	wire [7:0] A;
-	wire R_en, W_en;
+	reg R_en, W_en;
 
 	// For states
 	parameter INIT = 0, STBY = 1, COMP = 2, DONE = 3;
@@ -47,49 +47,98 @@ module LabExam(Clk, Rst, go, count, done);
 				STBY: begin
 					// stand-by state after go, reset all
 					// local storage
-					done <= 0;
-					count <= 0;
-					i <= 0;
+								done <= 0;
+								count <= 0;
+								i <= 0;
+								R_en <= 0;
+								W_en <= 0;
 				end
 
 				SET_TEMP: begin
-					// Set the temp equals to A[i]
-					temp <= A[i];
-                                end
+								temp <= A[i];
+				end
 
-                                INCR_I: begin
-                                        i <= i + 1;
-                                end
+				INCR_I: begin
+								i <= i + 1;
+				end
 
-                                INCR_CNT: begin
-                                        count <= count + 1;
-                                end
+				INCR_CNT: begin
+								count <= count + 1;
+								i <= i + 1;
+				end
 
+				DIFF: begin
+								A[i] <= temp - 48;
+				end
 
-                        endcase
-		end
+			endcase
 
-	end
+		end	// end if else
+
+	end	// end always
 
 
 
 	// Things need to be updated upon other change of variables
-	always @(state, go, i, a)
+	always @(state, go, i, count, temp) // The conditions may have issues
 	begin
+					R_en	<= 0;
+					W_en	<= 0;
 
+					case(state)
+									INIT: begin
+													if(go == 1) state_next <= STBY;
+													else state_next <= INIT;
+									end
 
+									STBY: begin
+													state_next <= COMP;
+									end
 
+									COMP: begin
+													R_en <= 1;
+													
+													if(i < 16) state_next <= SET_TEMP;
+													else state_next <= DONE;
+									end
 
+									DONE: begin
+													done <= 1;
+													// Stuck here when done
+									end
 
+									SET_TEMP: begin
+													R_en <= 0;
+													state_next <= INTMID;
+									end
 
+									INTMID: begin
+													if( (temp > 47) && (temp < 58) ) begin
+																	state_next <= INCR_I;
+													end
+													else state_next <= INCR_CNT;
+									end
 
+									INCR_CNT: begin
+													state_next <= DIFF;
+													W_en <= 1;
+									end
 
+									INCR_I: begin
+													state_next <= INTMID2;
+									end
+									
+									DIFF: begin
+													state_next <= INTMID2;
+									end
 
+									INTMID2: begin
+													state_next <= COMP;
+													W_en <= 0;
+									end
 
+					endcase
 
-
-
-
-	end
+	end	// end always
 	
 endmodule
