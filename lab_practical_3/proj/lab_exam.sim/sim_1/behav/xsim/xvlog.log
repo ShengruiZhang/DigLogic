@@ -1,6 +1,0 @@
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Ray/Desktop/DigLogic/lab_practical_3/RegFile.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module RegFile16x8
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Ray/Desktop/DigLogic/lab_practical_3/datapath.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module LabExam
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Ray/Desktop/DigLogic/lab_practical_3/datapath_sim.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module LabExam_sim

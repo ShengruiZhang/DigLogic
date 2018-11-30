@@ -1,12 +1,14 @@
 // The behavioral HLSM for Lab Exam 3?
 `timescale 1ns/1ps
 
-module LabExam(Clk, Rst, go, count, done);
+module LabExam(Clk, Rst, go, count, done, out7, scr_out);
 	input Clk, Rst;
 	input go;
 
 	output reg [6:0] count;
 	output reg done;
+	output reg [7:0] scr_out;
+	output reg [6:0] out7;
 
 	// Local storage
 	reg [4:0] i;
@@ -17,18 +19,34 @@ module LabExam(Clk, Rst, go, count, done);
 	reg R_en, W_en;
 	reg [7:0] Write_Data;
 
+
+	// reg for display
+	reg [6:0] disp_temp;
+
+	// debug
+	(* mark_debug = "true" *) wire [7:0] debug_Reg0, debug_Reg1, debug_Reg2, debug_Reg3, debug_Reg4, debug_Reg5, debug_Reg6, debug_Reg7,
+					debug_Reg8, debug_Reg9, debug_Reg10, debug_Reg11,
+					debug_Reg12, debug_Reg13, debug_Reg14, debug_Reg15;
+
 	// For states
 	parameter INIT = 0, STBY = 1, COMP = 2, DONE = 3;
 	parameter SET_TEMP = 4, INTMID = 5, INTMID2 = 6;
 	parameter INCR_CNT = 7, INCR_I = 8;
 	parameter DIFF = 9;
 	parameter INTMID3 = 10;
+	parameter POST_DONE = 11;
 
 	reg[3:0] state, statenext;
 
 	// Use RegisterFile
 	//RegFile16x8 rf1(R_Addr, W_Addr, R_en, W_en, R_Data, W_Data,   Clk, Rst);
-	RegFile16x8 rf1(i[3:0], i[3:0], R_en, W_en, A, Write_Data, Clk, Rst);
+	RegFile16x8 rf1(i[3:0], i[3:0], R_en, W_en, A, Write_Data, Clk, Rst,
+					debug_Reg0, debug_Reg1, debug_Reg2, debug_Reg3,
+					debug_Reg4, debug_Reg5, debug_Reg6, debug_Reg7,
+					debug_Reg8, debug_Reg9, debug_Reg10, debug_Reg11,
+					debug_Reg12, debug_Reg13, debug_Reg14, debug_Reg15);
+
+	TwoDigitDisplay disp1(Clk, disp_temp, out7, scr_out);
 	
 	// Things need to be updated at pos clk
 	always @(posedge Clk)
@@ -48,32 +66,44 @@ module LabExam(Clk, Rst, go, count, done);
 				STBY: begin
 					// stand-by state after go, reset all
 					// local storage
-					//done <= 0;
 					count <= 0;
 					i <= 0;
-					//R_en <= 0;
-					//W_en <= 0;
+					disp_temp <= count;
+				end
+
+				DONE: begin
+					i <= 0;
+				end
+
+				POST_DONE: begin
+					disp_temp <= A;
+					if( i < 16 ) i <= i + 1;
+					else i <= 0;
 				end
 
 				SET_TEMP: begin
 					temp <= A;
+					disp_temp <= count;
 				end
 
 				INCR_I: begin
 					i <= i + 1;
+					disp_temp <= count;
 				end
 
 				INCR_CNT: begin
 					count <= count + 1;
 					Write_Data <= temp - 48;
+					disp_temp <= count;
 				end
 
 				DIFF: begin
-					//i <= i + 1;
+					disp_temp <= count;
 				end
 				
 				INTMID3: begin
 					i <= i + 1;
+					disp_temp <= count;
 				end
 
 			endcase
@@ -110,7 +140,14 @@ module LabExam(Clk, Rst, go, count, done);
 
 			DONE: begin
 				done <= 1;
+				R_en <= 1;
 				// Stuck here when done
+				statenext <= POST_DONE;
+			end
+
+			POST_DONE: begin
+				done <= 1;
+				statenext <= POST_DONE;
 			end
 
 			SET_TEMP: begin

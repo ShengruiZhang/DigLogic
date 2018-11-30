@@ -16,8 +16,8 @@ Compiling module unisims_ver.LDCE(INIT=1'b1)
 Compiling module unisims_ver.x_lut2_mux4
 Compiling module unisims_ver.LUT2
 Compiling module unisims_ver.LDCE
-Compiling module unisims_ver.LUT4
 Compiling module unisims_ver.LUT6
+Compiling module unisims_ver.LUT4
 Compiling module unisims_ver.LUT5
 Compiling module unisims_ver.x_lut1_mux2
 Compiling module unisims_ver.LUT1

@@ -1,7 +1,7 @@
-Running: xsim.dir/LabExam_sim_func_synth/xsimk.exe -simmode gui -wdb LabExam_sim_func_synth.wdb -simrunnum 0 -socket 1824
+Running: xsim.dir/LabExam_sim_func_synth/xsimk.exe -simmode gui -wdb LabExam_sim_func_synth.wdb -simrunnum 0 -socket 1654
 Design successfully loaded
-Design Loading Memory Usage: 5800 KB (Peak: 5800 KB)
-Design Loading CPU Usage: 30 ms
+Design Loading Memory Usage: 6272 KB (Peak: 6272 KB)
+Design Loading CPU Usage: 15 ms
 Simulation completed
-Simulation Memory Usage: 6680 KB (Peak: 6680 KB)
+Simulation Memory Usage: 7412 KB (Peak: 7412 KB)
 Simulation CPU Usage: 46 ms

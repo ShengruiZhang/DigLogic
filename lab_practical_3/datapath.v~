@@ -1,12 +1,14 @@
 // The behavioral HLSM for Lab Exam 3?
 `timescale 1ns/1ps
 
-module LabExam(Clk, Rst, go, count, done);
+module LabExam(Clk, Rst, go, count, done, out7, scr_out);
 	input Clk, Rst;
 	input go;
 
 	output reg [6:0] count;
 	output reg done;
+	output reg [7:0] scr_out;
+	output reg [6:0] out7;
 
 	// Local storage
 	reg [4:0] i;
@@ -15,19 +17,36 @@ module LabExam(Clk, Rst, go, count, done);
 	// Wires
 	wire [7:0] A;
 	reg R_en, W_en;
+	reg [7:0] Write_Data;
+
+
+	// reg for display
+	reg [6:0] disp_temp;
+
+	// debug
+	(* mark_debug = "true" *) wire [7:0] debug_Reg0, debug_Reg1, debug_Reg2, debug_Reg3, debug_Reg4, debug_Reg5, debug_Reg6, debug_Reg7,
+					debug_Reg8, debug_Reg9, debug_Reg10, debug_Reg11,
+					debug_Reg12, debug_Reg13, debug_Reg14, debug_Reg15;
 
 	// For states
 	parameter INIT = 0, STBY = 1, COMP = 2, DONE = 3;
 	parameter SET_TEMP = 4, INTMID = 5, INTMID2 = 6;
 	parameter INCR_CNT = 7, INCR_I = 8;
 	parameter DIFF = 9;
+	parameter INTMID3 = 10;
+	parameter POST_DONE = 11;
 
-	reg[3:0] state, state_next;
+	reg[3:0] state, statenext;
 
 	// Use RegisterFile
-	//RegFile16x8 rf1(R_Addr, W_Addr, R_en, W_en, R_Data, W_Data, Clk, Rst);
-	RegFile16x8 rf1(i, i, R_en, W_en,
-		A, (temp - 48), Clk, Rst);
+	//RegFile16x8 rf1(R_Addr, W_Addr, R_en, W_en, R_Data, W_Data,   Clk, Rst);
+	RegFile16x8 rf1(i[3:0], i[3:0], R_en, W_en, A, Write_Data, Clk, Rst,
+					debug_Reg0, debug_Reg1, debug_Reg2, debug_Reg3,
+					debug_Reg4, debug_Reg5, debug_Reg6, debug_Reg7,
+					debug_Reg8, debug_Reg9, debug_Reg10, debug_Reg11,
+					debug_Reg12, debug_Reg13, debug_Reg14, debug_Reg15);
+
+	TwoDigitDisplay disp1(Clk, disp_temp, out7, scr_out);
 	
 	// Things need to be updated at pos clk
 	always @(posedge Clk)
@@ -39,36 +58,52 @@ module LabExam(Clk, Rst, go, count, done);
 
 		else
 		begin
-			// Update the state_next at every pos edge of clk
-			state <= state_next;
+			// Update the statenext at every pos edge of clk
+			state <= statenext;
 
 			// Deal with each case
 			case(state)
 				STBY: begin
 					// stand-by state after go, reset all
 					// local storage
-								done <= 0;
-								count <= 0;
-								i <= 0;
-								R_en <= 0;
-								W_en <= 0;
+					count <= 0;
+					i <= 0;
+					disp_temp <= count;
+				end
+
+				DONE: begin
+					i <= 0;
+				end
+
+				POST_DONE: begin
+					disp_temp <= A;
+					if( i < 16 )
+					i <= i + 1;
 				end
 
 				SET_TEMP: begin
-								temp <= A[i];
+					temp <= A;
+					disp_temp <= count;
 				end
 
 				INCR_I: begin
-								i <= i + 1;
+					i <= i + 1;
+					disp_temp <= count;
 				end
 
 				INCR_CNT: begin
-								count <= count + 1;
-								i <= i + 1;
+					count <= count + 1;
+					Write_Data <= temp - 48;
+					disp_temp <= count;
 				end
 
 				DIFF: begin
-								A[i] <= temp - 48;
+					disp_temp <= count;
+				end
+				
+				INTMID3: begin
+					i <= i + 1;
+					disp_temp <= count;
 				end
 
 			endcase
@@ -80,64 +115,85 @@ module LabExam(Clk, Rst, go, count, done);
 
 
 	// Things need to be updated upon other change of variables
-	always @(state, go, i, count, temp) // The conditions may have issues
+	always @(state, go, i, count) // The conditions may have issues
 	begin
-					R_en	<= 0;
-					W_en	<= 0;
+		R_en	<= 0;
+		W_en	<= 0;
 
-					case(state)
-									INIT: begin
-													if(go == 1) state_next <= STBY;
-													else state_next <= INIT;
-									end
+		case(state)
+			INIT: begin
+				done <= 0;
+				if(go == 1) statenext <= STBY;
+				else statenext <= INIT;
+			end
 
-									STBY: begin
-													state_next <= COMP;
-									end
+			STBY: begin
+				statenext <= COMP;
+			end
 
-									COMP: begin
-													R_en <= 1;
-													
-													if(i < 16) state_next <= SET_TEMP;
-													else state_next <= DONE;
-									end
+			COMP: begin
+				R_en <= 1;
+				
+				if(i < 16) statenext <= SET_TEMP;
+				else statenext <= DONE;
+			end
 
-									DONE: begin
-													done <= 1;
-													// Stuck here when done
-									end
+			DONE: begin
+				done <= 1;
+				R_en <= 1;
+				// Stuck here when done
+				statenext <= POST_DONE;
+			end
 
-									SET_TEMP: begin
-													R_en <= 0;
-													state_next <= INTMID;
-									end
+			POST_DONE: begin
+				done <= 1;
+				statenext <= POST_DONE;
+			end
 
-									INTMID: begin
-													if( (temp > 47) && (temp < 58) ) begin
-																	state_next <= INCR_I;
-													end
-													else state_next <= INCR_CNT;
-									end
+			SET_TEMP: begin
+				R_en <= 1;
+				statenext <= INTMID;
+			end
 
-									INCR_CNT: begin
-													state_next <= DIFF;
-													W_en <= 1;
-									end
+			INTMID: begin
+				R_en <= 1;
+				if( (temp > 47) && (temp < 58) ) begin
+					statenext <= INCR_CNT;
+				end
+				else statenext <= INCR_I;
+			end
 
-									INCR_I: begin
-													state_next <= INTMID2;
-									end
-									
-									DIFF: begin
-													state_next <= INTMID2;
-									end
+			INCR_CNT: begin
+				statenext <= DIFF;
+				R_en <= 0;
+				W_en <= 0;
+			end
 
-									INTMID2: begin
-													state_next <= COMP;
-													W_en <= 0;
-									end
+			INCR_I: begin
+				statenext <= INTMID2;
+				R_en <= 0;
+			end
+			
+			DIFF: begin
+				W_en <= 0;
+				statenext <= INTMID3;
+			end
+			
+			INTMID3: begin
+				W_en <= 1;
+				statenext <= INTMID2;
+			end
 
-					endcase
+			INTMID2: begin
+				statenext <= COMP;
+				W_en <= 0;
+			end
+			
+			default: begin
+				statenext <= INIT;
+			end
+
+		endcase
 
 	end	// end always
 	
