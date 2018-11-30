@@ -4,10 +4,12 @@
 module top(Clk_unscaled, Rst, go, out7, src_out,
 					done);
 	input Clk_unscaled, Rst, go;
-	output wire[6:0] count;
+	//output wire[6:0] count;
+	output wire[6:0] out7;
+	output wire[7:0] src_out;
 	output wire done;
 
-	// Wires
+	// wires
 	wire Clk;
 
 	ClkDiv clk1(Clk_unscaled, Rst, Clk);

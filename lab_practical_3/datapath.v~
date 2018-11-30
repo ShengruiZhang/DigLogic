@@ -77,8 +77,8 @@ module LabExam(Clk, Rst, go, count, done, out7, scr_out);
 
 				POST_DONE: begin
 					disp_temp <= A;
-					if( i < 16 )
-					i <= i + 1;
+					if( i < 16 ) i <= i + 1;
+					else i <= 0;
 				end
 
 				SET_TEMP: begin
