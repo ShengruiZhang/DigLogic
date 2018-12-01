@@ -1,0 +1,467 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Fri Nov 30 15:08:41 2018
+# Process ID: 8244
+# Current directory: C:/Users/Ray/Desktop/DigLogic/lab_practical_3/proj/lab_exam.runs/synth_1
+# Command line: vivado.exe -log LabExam.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source LabExam.tcl
+# Log file: C:/Users/Ray/Desktop/DigLogic/lab_practical_3/proj/lab_exam.runs/synth_1/LabExam.vds
+# Journal file: C:/Users/Ray/Desktop/DigLogic/lab_practical_3/proj/lab_exam.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source LabExam.tcl -notrace
+Command: synth_design -top LabExam -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 7092 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 334.648 ; gain = 99.883
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'LabExam' [C:/Users/Ray/Desktop/DigLogic/lab_practical_3/datapath.v:4]
+	Parameter INIT bound to: 32'sb00000000000000000000000000000000 
+	Parameter STBY bound to: 1 - type: integer 
+	Parameter COMP bound to: 2 - type: integer 
+	Parameter DONE bound to: 3 - type: integer 
+	Parameter SET_TEMP bound to: 4 - type: integer 
+	Parameter INTMID bound to: 5 - type: integer 
+	Parameter INTMID2 bound to: 6 - type: integer 
+	Parameter INCR_CNT bound to: 7 - type: integer 
+	Parameter INCR_I bound to: 8 - type: integer 
+	Parameter DIFF bound to: 9 - type: integer 
+	Parameter INTMID3 bound to: 10 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [C:/Users/Ray/Desktop/DigLogic/lab_practical_3/datapath.v:21]
+INFO: [Synth 8-6157] synthesizing module 'RegFile16x8' [C:/Users/Ray/Desktop/DigLogic/lab_practical_3/RegFile.v:2]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [C:/Users/Ray/Desktop/DigLogic/lab_practical_3/RegFile.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'RegFile16x8' (1#1) [C:/Users/Ray/Desktop/DigLogic/lab_practical_3/RegFile.v:2]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Ray/Desktop/DigLogic/lab_practical_3/datapath.v:56]
+WARNING: [Synth 8-567] referenced signal 'temp' should be on the sensitivity list [C:/Users/Ray/Desktop/DigLogic/lab_practical_3/datapath.v:93]
+INFO: [Synth 8-6155] done synthesizing module 'LabExam' (2#1) [C:/Users/Ray/Desktop/DigLogic/lab_practical_3/datapath.v:4]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 389.605 ; gain = 154.840
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 389.605 ; gain = 154.840
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 389.605 ; gain = 154.840
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/Ray/Desktop/DigLogic/lab_practical_3/LabExam.xdc]
+WARNING: [Vivado 12-584] No ports matched 'en_out[0]'. [C:/Users/Ray/Desktop/DigLogic/lab_practical_3/LabExam.xdc:3]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Ray/Desktop/DigLogic/lab_practical_3/LabExam.xdc:3]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'en_out[0]'. [C:/Users/Ray/Desktop/DigLogic/lab_practical_3/LabExam.xdc:4]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Ray/Desktop/DigLogic/lab_practical_3/LabExam.xdc:4]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'en_out[1]'. [C:/Users/Ray/Desktop/DigLogic/lab_practical_3/LabExam.xdc:5]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Ray/Desktop/DigLogic/lab_practical_3/LabExam.xdc:5]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'en_out[1]'. [C:/Users/Ray/Desktop/DigLogic/lab_practical_3/LabExam.xdc:6]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Ray/Desktop/DigLogic/lab_practical_3/LabExam.xdc:6]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'en_out[2]'. [C:/Users/Ray/Desktop/DigLogic/lab_practical_3/LabExam.xdc:7]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Ray/Desktop/DigLogic/lab_practical_3/LabExam.xdc:7]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'en_out[2]'. [C:/Users/Ray/Desktop/DigLogic/lab_practical_3/LabExam.xdc:8]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Ray/Desktop/DigLogic/lab_practical_3/LabExam.xdc:8]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'en_out[3]'. [C:/Users/Ray/Desktop/DigLogic/lab_practical_3/LabExam.xdc:9]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Ray/Desktop/DigLogic/lab_practical_3/LabExam.xdc:9]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'en_out[3]'. [C:/Users/Ray/Desktop/DigLogic/lab_practical_3/LabExam.xdc:10]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Ray/Desktop/DigLogic/lab_practical_3/LabExam.xdc:10]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'en_out[4]'. [C:/Users/Ray/Desktop/DigLogic/lab_practical_3/LabExam.xdc:11]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Ray/Desktop/DigLogic/lab_practical_3/LabExam.xdc:11]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'en_out[4]'. [C:/Users/Ray/Desktop/DigLogic/lab_practical_3/LabExam.xdc:12]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Ray/Desktop/DigLogic/lab_practical_3/LabExam.xdc:12]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'en_out[5]'. [C:/Users/Ray/Desktop/DigLogic/lab_practical_3/LabExam.xdc:13]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Ray/Desktop/DigLogic/lab_practical_3/LabExam.xdc:13]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'en_out[5]'. [C:/Users/Ray/Desktop/DigLogic/lab_practical_3/LabExam.xdc:14]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Ray/Desktop/DigLogic/lab_practical_3/LabExam.xdc:14]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'en_out[6]'. [C:/Users/Ray/Desktop/DigLogic/lab_practical_3/LabExam.xdc:15]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Ray/Desktop/DigLogic/lab_practical_3/LabExam.xdc:15]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'en_out[6]'. [C:/Users/Ray/Desktop/DigLogic/lab_practical_3/LabExam.xdc:16]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Ray/Desktop/DigLogic/lab_practical_3/LabExam.xdc:16]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'en_out[7]'. [C:/Users/Ray/Desktop/DigLogic/lab_practical_3/LabExam.xdc:17]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Ray/Desktop/DigLogic/lab_practical_3/LabExam.xdc:17]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'en_out[7]'. [C:/Users/Ray/Desktop/DigLogic/lab_practical_3/LabExam.xdc:18]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Ray/Desktop/DigLogic/lab_practical_3/LabExam.xdc:18]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'out7[6]'. [C:/Users/Ray/Desktop/DigLogic/lab_practical_3/LabExam.xdc:29]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Ray/Desktop/DigLogic/lab_practical_3/LabExam.xdc:29]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'out7[6]'. [C:/Users/Ray/Desktop/DigLogic/lab_practical_3/LabExam.xdc:30]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Ray/Desktop/DigLogic/lab_practical_3/LabExam.xdc:30]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'out7[5]'. [C:/Users/Ray/Desktop/DigLogic/lab_practical_3/LabExam.xdc:31]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Ray/Desktop/DigLogic/lab_practical_3/LabExam.xdc:31]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'out7[5]'. [C:/Users/Ray/Desktop/DigLogic/lab_practical_3/LabExam.xdc:32]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Ray/Desktop/DigLogic/lab_practical_3/LabExam.xdc:32]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'out7[4]'. [C:/Users/Ray/Desktop/DigLogic/lab_practical_3/LabExam.xdc:33]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Ray/Desktop/DigLogic/lab_practical_3/LabExam.xdc:33]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'out7[4]'. [C:/Users/Ray/Desktop/DigLogic/lab_practical_3/LabExam.xdc:34]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Ray/Desktop/DigLogic/lab_practical_3/LabExam.xdc:34]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'out7[3]'. [C:/Users/Ray/Desktop/DigLogic/lab_practical_3/LabExam.xdc:35]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Ray/Desktop/DigLogic/lab_practical_3/LabExam.xdc:35]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'out7[3]'. [C:/Users/Ray/Desktop/DigLogic/lab_practical_3/LabExam.xdc:36]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Ray/Desktop/DigLogic/lab_practical_3/LabExam.xdc:36]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'out7[2]'. [C:/Users/Ray/Desktop/DigLogic/lab_practical_3/LabExam.xdc:37]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Ray/Desktop/DigLogic/lab_practical_3/LabExam.xdc:37]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'out7[2]'. [C:/Users/Ray/Desktop/DigLogic/lab_practical_3/LabExam.xdc:38]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Ray/Desktop/DigLogic/lab_practical_3/LabExam.xdc:38]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'out7[1]'. [C:/Users/Ray/Desktop/DigLogic/lab_practical_3/LabExam.xdc:39]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Ray/Desktop/DigLogic/lab_practical_3/LabExam.xdc:39]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'out7[1]'. [C:/Users/Ray/Desktop/DigLogic/lab_practical_3/LabExam.xdc:40]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Ray/Desktop/DigLogic/lab_practical_3/LabExam.xdc:40]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'out7[0]'. [C:/Users/Ray/Desktop/DigLogic/lab_practical_3/LabExam.xdc:41]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Ray/Desktop/DigLogic/lab_practical_3/LabExam.xdc:41]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'out7[0]'. [C:/Users/Ray/Desktop/DigLogic/lab_practical_3/LabExam.xdc:42]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Ray/Desktop/DigLogic/lab_practical_3/LabExam.xdc:42]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'candy'. [C:/Users/Ray/Desktop/DigLogic/lab_practical_3/LabExam.xdc:49]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Ray/Desktop/DigLogic/lab_practical_3/LabExam.xdc:49]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'candy'. [C:/Users/Ray/Desktop/DigLogic/lab_practical_3/LabExam.xdc:50]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Ray/Desktop/DigLogic/lab_practical_3/LabExam.xdc:50]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'RST'. [C:/Users/Ray/Desktop/DigLogic/lab_practical_3/LabExam.xdc:57]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Ray/Desktop/DigLogic/lab_practical_3/LabExam.xdc:57]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'RST'. [C:/Users/Ray/Desktop/DigLogic/lab_practical_3/LabExam.xdc:58]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Ray/Desktop/DigLogic/lab_practical_3/LabExam.xdc:58]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'RST'. [C:/Users/Ray/Desktop/DigLogic/lab_practical_3/LabExam.xdc:65]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Ray/Desktop/DigLogic/lab_practical_3/LabExam.xdc:65]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'RST'. [C:/Users/Ray/Desktop/DigLogic/lab_practical_3/LabExam.xdc:66]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Ray/Desktop/DigLogic/lab_practical_3/LabExam.xdc:66]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [C:/Users/Ray/Desktop/DigLogic/lab_practical_3/LabExam.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Ray/Desktop/DigLogic/lab_practical_3/LabExam.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/LabExam_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/LabExam_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 733.145 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 733.145 ; gain = 498.379
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 733.145 ; gain = 498.379
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 733.145 ; gain = 498.379
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'LabExam'
+INFO: [Synth 8-5544] ROM "Write_Data" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "temp" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "i" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "count" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "statenext" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "done" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "W_en" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "R_en" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "statenext" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "statenext" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+WARNING: [Synth 8-327] inferring latch for variable 'FSM_sequential_statenext_reg' [C:/Users/Ray/Desktop/DigLogic/lab_practical_3/datapath.v:101]
+WARNING: [Synth 8-327] inferring latch for variable 'FSM_onehot_statenext_reg' [C:/Users/Ray/Desktop/DigLogic/lab_practical_3/datapath.v:101]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    INIT |                      00000000001 |                             0000
+                    STBY |                      00000000010 |                             0001
+                    COMP |                      00000000100 |                             0010
+                SET_TEMP |                      00000001000 |                             0100
+                  INTMID |                      00000010000 |                             0101
+                INCR_CNT |                      00000100000 |                             0111
+                    DIFF |                      00001000000 |                             1001
+                 INTMID3 |                      00010000000 |                             1010
+                  INCR_I |                      00100000000 |                             1000
+                 INTMID2 |                      01000000000 |                             0110
+                    DONE |                      10000000000 |                             0011
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'LabExam'
+WARNING: [Synth 8-327] inferring latch for variable 'FSM_onehot_statenext_reg' [C:/Users/Ray/Desktop/DigLogic/lab_practical_3/datapath.v:101]
+WARNING: [Synth 8-327] inferring latch for variable 'done_reg' [C:/Users/Ray/Desktop/DigLogic/lab_practical_3/datapath.v:100]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 733.145 ; gain = 498.379
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 1     
+	   2 Input      7 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 18    
+	                7 Bit    Registers := 1     
+	                5 Bit    Registers := 1     
++---Muxes : 
+	  11 Input     11 Bit        Muxes := 1     
+	   2 Input     11 Bit        Muxes := 3     
+	   2 Input      8 Bit        Muxes := 32    
+	   7 Input      7 Bit        Muxes := 1     
+	   7 Input      5 Bit        Muxes := 1     
+	  11 Input      4 Bit        Muxes := 1     
+	   7 Input      1 Bit        Muxes := 2     
+	  11 Input      1 Bit        Muxes := 4     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module LabExam 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 1     
+	   2 Input      7 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 2     
+	                7 Bit    Registers := 1     
+	                5 Bit    Registers := 1     
++---Muxes : 
+	  11 Input     11 Bit        Muxes := 1     
+	   2 Input     11 Bit        Muxes := 3     
+	   7 Input      7 Bit        Muxes := 1     
+	   7 Input      5 Bit        Muxes := 1     
+	  11 Input      4 Bit        Muxes := 1     
+	   7 Input      1 Bit        Muxes := 2     
+	  11 Input      1 Bit        Muxes := 4     
+Module RegFile16x8 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 16    
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 32    
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 733.145 ; gain = 498.379
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 733.145 ; gain = 498.379
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 733.145 ; gain = 498.379
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 747.586 ; gain = 512.820
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:26 ; elapsed = 00:00:30 . Memory (MB): peak = 747.586 ; gain = 512.820
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:26 ; elapsed = 00:00:30 . Memory (MB): peak = 747.586 ; gain = 512.820
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:26 ; elapsed = 00:00:30 . Memory (MB): peak = 747.586 ; gain = 512.820
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:26 ; elapsed = 00:00:30 . Memory (MB): peak = 747.586 ; gain = 512.820
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:26 ; elapsed = 00:00:30 . Memory (MB): peak = 747.586 ; gain = 512.820
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:26 ; elapsed = 00:00:30 . Memory (MB): peak = 747.586 ; gain = 512.820
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+------+------+
+|      |Cell  |Count |
++------+------+------+
+|1     |BUFG  |     1|
+|2     |LUT1  |    11|
+|3     |LUT2  |    20|
+|4     |LUT3  |     7|
+|5     |LUT4  |     7|
+|6     |LUT5  |     5|
+|7     |LUT6  |   162|
+|8     |MUXF7 |    16|
+|9     |MUXF8 |     8|
+|10    |FDRE  |   107|
+|11    |FDSE  |    60|
+|12    |LD    |    12|
+|13    |IBUF  |     3|
+|14    |OBUF  |     8|
++------+------+------+
+
+Report Instance Areas: 
++------+---------+------------+------+
+|      |Instance |Module      |Cells |
++------+---------+------------+------+
+|1     |top      |            |   427|
+|2     |  rf1    |RegFile16x8 |   320|
++------+---------+------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:26 ; elapsed = 00:00:30 . Memory (MB): peak = 747.586 ; gain = 512.820
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 4 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:21 . Memory (MB): peak = 747.586 ; gain = 169.281
+Synthesis Optimization Complete : Time (s): cpu = 00:00:26 ; elapsed = 00:00:30 . Memory (MB): peak = 747.586 ; gain = 512.820
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 39 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 12 instances were transformed.
+  LD => LDCE: 12 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+31 Infos, 41 Warnings, 36 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:29 ; elapsed = 00:00:33 . Memory (MB): peak = 747.848 ; gain = 525.898
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Ray/Desktop/DigLogic/lab_practical_3/proj/lab_exam.runs/synth_1/LabExam.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file LabExam_utilization_synth.rpt -pb LabExam_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.050 . Memory (MB): peak = 747.848 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Fri Nov 30 15:09:18 2018...

@@ -22,81 +22,81 @@ module HLSM_MaxMin(Clk, Rst, go, max_diff, done);
   
     always @ (posedge Clk)
     begin
-            if(Rst == 1) begin
-                state <= sA;
-            end
-            else begin
-                state <= statenext;
-           case (state) 
-			sB: begin
-				i <= 0;
-				max<= 0;
-				min <= 255;
-			end
-			sE: begin
-				min <= 	a_i;
-			end
+        if(Rst == 1) begin
+            state <= sA;
+        end
+        else begin
+            state <= statenext;
+			case (state) 
+				sB: begin
+					i <= 0;
+					max<= 0;
+					min <= 255;
+				end
+				sE: begin
+					min <= 	a_i;
+				end
 
-			sG: begin
-				max <= a_i;
-			end
+				sG: begin
+					max <= a_i;
+				end
 
-			sH: begin
-				i <= i+1;
-			end
-
-			sI: begin
-				max_diff <= max - min;
-			end
+				sH: begin
+					i <= i+1;
+				end
+		
+				sI: begin
+					max_diff <= max - min;
+				end
 			endcase
-        end
-        end
-        
-        always @(state, go, i, a_i, min, max)
-        begin
-            R_en <= 0;
-            done <= 0;
-            case(state)
-                sA: begin
-                    if(go == 1) statenext <= sB;
-                    else statenext <= sA;
-                end
-                sB: begin
-                    done <= 0;
-                    statenext <= sC;
-                end
-                sC: begin
-			if(~(i<256)) statenext <= sI;
-			else statenext <= sD;
-                end
-                sD: begin
-			R_en <= 1;
-			if(a_i<min) statenext <= sE;
-			else statenext <= sF;
-                end
-                sE: begin
-			R_en <= 1;
-			statenext <= sF;
-                end
-                sF: begin
-			R_en <= 1;
-			if(a_i>max) statenext <= sG;
-			else statenext <= sH;
-                end
-                sG: begin
-			R_en <= 1;
-			statenext <= sH;
-                end  
-                sH: begin
-                     statenext <= sC;
-                end 
-                sI: begin
-			statenext <= sA;
-			done <= 1;
-                end                
-                default: begin
-                    statenext <= sA;
-                end                                                                  
-            endcase
-          end       
+		end
+    end
+    
+    always @(state, go, i, a_i, min, max)
+    begin
+        R_en <= 0;
+        done <= 0;
+        case(state)
+            sA: begin
+                if(go == 1) statenext <= sB;
+                else statenext <= sA;
+            end
+            sB: begin
+                done <= 0;
+                statenext <= sC;
+            end
+            sC: begin
+		if(~(i<256)) statenext <= sI;
+		else statenext <= sD;
+            end
+            sD: begin
+		R_en <= 1;
+		if(a_i<min) statenext <= sE;
+		else statenext <= sF;
+            end
+            sE: begin
+		R_en <= 1;
+		statenext <= sF;
+            end
+            sF: begin
+		R_en <= 1;
+		if(a_i>max) statenext <= sG;
+		else statenext <= sH;
+            end
+            sG: begin
+		R_en <= 1;
+		statenext <= sH;
+            end  
+            sH: begin
+                 statenext <= sC;
+            end 
+            sI: begin
+		statenext <= sA;
+		done <= 1;
+            end                
+            default: begin
+                statenext <= sA;
+            end                                                                  
+        endcase
+    end       
 endmodule

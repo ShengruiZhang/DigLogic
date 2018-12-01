@@ -1,0 +1,959 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="LabExam_sim_func_synth.wdb" id="1">
+         <top_modules>
+            <top_module name="LabExam_sim" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="30000000001fs"></ZoomEndTime>
+      <Cursor1Time time="30000000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="177"></NameColumnWidth>
+      <ValueColumnWidth column_width="112"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="230" />
+   <wvobject fp_name="/LabExam_sim/Clk" type="logic">
+      <obj_property name="ElementShortName">Clk</obj_property>
+      <obj_property name="ObjectShortName">Clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/Rst" type="logic">
+      <obj_property name="ElementShortName">Rst</obj_property>
+      <obj_property name="ObjectShortName">Rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/go" type="logic">
+      <obj_property name="ElementShortName">go</obj_property>
+      <obj_property name="ObjectShortName">go</obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/count" type="array">
+      <obj_property name="ElementShortName">count[6:0]</obj_property>
+      <obj_property name="ObjectShortName">count[6:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/done" type="logic">
+      <obj_property name="ElementShortName">done</obj_property>
+      <obj_property name="ObjectShortName">done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/debug_Reg0" type="array">
+      <obj_property name="ElementShortName">debug_Reg0[7:0]</obj_property>
+      <obj_property name="ObjectShortName">debug_Reg0[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/debug_Reg1" type="array">
+      <obj_property name="ElementShortName">debug_Reg1[7:0]</obj_property>
+      <obj_property name="ObjectShortName">debug_Reg1[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/debug_Reg2" type="array">
+      <obj_property name="ElementShortName">debug_Reg2[7:0]</obj_property>
+      <obj_property name="ObjectShortName">debug_Reg2[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/debug_Reg3" type="array">
+      <obj_property name="ElementShortName">debug_Reg3[7:0]</obj_property>
+      <obj_property name="ObjectShortName">debug_Reg3[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/debug_Reg4" type="array">
+      <obj_property name="ElementShortName">debug_Reg4[7:0]</obj_property>
+      <obj_property name="ObjectShortName">debug_Reg4[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/debug_Reg5" type="array">
+      <obj_property name="ElementShortName">debug_Reg5[7:0]</obj_property>
+      <obj_property name="ObjectShortName">debug_Reg5[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/debug_Reg6" type="array">
+      <obj_property name="ElementShortName">debug_Reg6[7:0]</obj_property>
+      <obj_property name="ObjectShortName">debug_Reg6[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/debug_Reg7" type="array">
+      <obj_property name="ElementShortName">debug_Reg7[7:0]</obj_property>
+      <obj_property name="ObjectShortName">debug_Reg7[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/debug_Reg8" type="array">
+      <obj_property name="ElementShortName">debug_Reg8[7:0]</obj_property>
+      <obj_property name="ObjectShortName">debug_Reg8[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/debug_Reg9" type="array">
+      <obj_property name="ElementShortName">debug_Reg9[7:0]</obj_property>
+      <obj_property name="ObjectShortName">debug_Reg9[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/debug_Reg10" type="array">
+      <obj_property name="ElementShortName">debug_Reg10[7:0]</obj_property>
+      <obj_property name="ObjectShortName">debug_Reg10[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/debug_Reg11" type="array">
+      <obj_property name="ElementShortName">debug_Reg11[7:0]</obj_property>
+      <obj_property name="ObjectShortName">debug_Reg11[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/debug_Reg12" type="array">
+      <obj_property name="ElementShortName">debug_Reg12[7:0]</obj_property>
+      <obj_property name="ObjectShortName">debug_Reg12[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/debug_Reg13" type="array">
+      <obj_property name="ElementShortName">debug_Reg13[7:0]</obj_property>
+      <obj_property name="ObjectShortName">debug_Reg13[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/debug_Reg14" type="array">
+      <obj_property name="ElementShortName">debug_Reg14[7:0]</obj_property>
+      <obj_property name="ObjectShortName">debug_Reg14[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/debug_Reg15" type="array">
+      <obj_property name="ElementShortName">debug_Reg15[7:0]</obj_property>
+      <obj_property name="ObjectShortName">debug_Reg15[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/enz_0" type="logic">
+      <obj_property name="ElementShortName">enz_0</obj_property>
+      <obj_property name="ObjectShortName">enz_0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/enz_1" type="logic">
+      <obj_property name="ElementShortName">enz_1</obj_property>
+      <obj_property name="ObjectShortName">enz_1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/enz_2" type="logic">
+      <obj_property name="ElementShortName">enz_2</obj_property>
+      <obj_property name="ObjectShortName">enz_2</obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/enz_3" type="logic">
+      <obj_property name="ElementShortName">enz_3</obj_property>
+      <obj_property name="ObjectShortName">enz_3</obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/enz_4" type="logic">
+      <obj_property name="ElementShortName">enz_4</obj_property>
+      <obj_property name="ObjectShortName">enz_4</obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/enz_5" type="logic">
+      <obj_property name="ElementShortName">enz_5</obj_property>
+      <obj_property name="ObjectShortName">enz_5</obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/enz_6" type="logic">
+      <obj_property name="ElementShortName">enz_6</obj_property>
+      <obj_property name="ObjectShortName">enz_6</obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/enz_7" type="logic">
+      <obj_property name="ElementShortName">enz_7</obj_property>
+      <obj_property name="ObjectShortName">enz_7</obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/Clk" type="logic">
+      <obj_property name="ElementShortName">Clk</obj_property>
+      <obj_property name="ObjectShortName">Clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/R_Addr" type="array">
+      <obj_property name="ElementShortName">R_Addr[3:0]</obj_property>
+      <obj_property name="ObjectShortName">R_Addr[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/R_Data" type="array">
+      <obj_property name="ElementShortName">R_Data[7:0]</obj_property>
+      <obj_property name="ObjectShortName">R_Data[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\R_Data[0]_INST_0_i_2_n_0 " type="logic">
+      <obj_property name="ElementShortName">\R_Data[0]_INST_0_i_2_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\R_Data[0]_INST_0_i_2_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\R_Data[0]_INST_0_i_3_n_0 " type="logic">
+      <obj_property name="ElementShortName">\R_Data[0]_INST_0_i_3_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\R_Data[0]_INST_0_i_3_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\R_Data[0]_INST_0_i_4_n_0 " type="logic">
+      <obj_property name="ElementShortName">\R_Data[0]_INST_0_i_4_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\R_Data[0]_INST_0_i_4_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\R_Data[0]_INST_0_i_5_n_0 " type="logic">
+      <obj_property name="ElementShortName">\R_Data[0]_INST_0_i_5_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\R_Data[0]_INST_0_i_5_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\R_Data[0]_INST_0_i_6_n_0 " type="logic">
+      <obj_property name="ElementShortName">\R_Data[0]_INST_0_i_6_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\R_Data[0]_INST_0_i_6_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\R_Data[0]_INST_0_i_7_n_0 " type="logic">
+      <obj_property name="ElementShortName">\R_Data[0]_INST_0_i_7_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\R_Data[0]_INST_0_i_7_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\R_Data[1]_INST_0_i_2_n_0 " type="logic">
+      <obj_property name="ElementShortName">\R_Data[1]_INST_0_i_2_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\R_Data[1]_INST_0_i_2_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\R_Data[1]_INST_0_i_3_n_0 " type="logic">
+      <obj_property name="ElementShortName">\R_Data[1]_INST_0_i_3_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\R_Data[1]_INST_0_i_3_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\R_Data[1]_INST_0_i_4_n_0 " type="logic">
+      <obj_property name="ElementShortName">\R_Data[1]_INST_0_i_4_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\R_Data[1]_INST_0_i_4_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\R_Data[1]_INST_0_i_5_n_0 " type="logic">
+      <obj_property name="ElementShortName">\R_Data[1]_INST_0_i_5_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\R_Data[1]_INST_0_i_5_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\R_Data[1]_INST_0_i_6_n_0 " type="logic">
+      <obj_property name="ElementShortName">\R_Data[1]_INST_0_i_6_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\R_Data[1]_INST_0_i_6_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\R_Data[1]_INST_0_i_7_n_0 " type="logic">
+      <obj_property name="ElementShortName">\R_Data[1]_INST_0_i_7_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\R_Data[1]_INST_0_i_7_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\R_Data[2]_INST_0_i_2_n_0 " type="logic">
+      <obj_property name="ElementShortName">\R_Data[2]_INST_0_i_2_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\R_Data[2]_INST_0_i_2_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\R_Data[2]_INST_0_i_3_n_0 " type="logic">
+      <obj_property name="ElementShortName">\R_Data[2]_INST_0_i_3_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\R_Data[2]_INST_0_i_3_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\R_Data[2]_INST_0_i_4_n_0 " type="logic">
+      <obj_property name="ElementShortName">\R_Data[2]_INST_0_i_4_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\R_Data[2]_INST_0_i_4_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\R_Data[2]_INST_0_i_5_n_0 " type="logic">
+      <obj_property name="ElementShortName">\R_Data[2]_INST_0_i_5_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\R_Data[2]_INST_0_i_5_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\R_Data[2]_INST_0_i_6_n_0 " type="logic">
+      <obj_property name="ElementShortName">\R_Data[2]_INST_0_i_6_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\R_Data[2]_INST_0_i_6_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\R_Data[2]_INST_0_i_7_n_0 " type="logic">
+      <obj_property name="ElementShortName">\R_Data[2]_INST_0_i_7_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\R_Data[2]_INST_0_i_7_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\R_Data[3]_INST_0_i_2_n_0 " type="logic">
+      <obj_property name="ElementShortName">\R_Data[3]_INST_0_i_2_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\R_Data[3]_INST_0_i_2_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\R_Data[3]_INST_0_i_3_n_0 " type="logic">
+      <obj_property name="ElementShortName">\R_Data[3]_INST_0_i_3_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\R_Data[3]_INST_0_i_3_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\R_Data[3]_INST_0_i_4_n_0 " type="logic">
+      <obj_property name="ElementShortName">\R_Data[3]_INST_0_i_4_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\R_Data[3]_INST_0_i_4_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\R_Data[3]_INST_0_i_5_n_0 " type="logic">
+      <obj_property name="ElementShortName">\R_Data[3]_INST_0_i_5_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\R_Data[3]_INST_0_i_5_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\R_Data[3]_INST_0_i_6_n_0 " type="logic">
+      <obj_property name="ElementShortName">\R_Data[3]_INST_0_i_6_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\R_Data[3]_INST_0_i_6_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\R_Data[3]_INST_0_i_7_n_0 " type="logic">
+      <obj_property name="ElementShortName">\R_Data[3]_INST_0_i_7_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\R_Data[3]_INST_0_i_7_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\R_Data[4]_INST_0_i_2_n_0 " type="logic">
+      <obj_property name="ElementShortName">\R_Data[4]_INST_0_i_2_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\R_Data[4]_INST_0_i_2_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\R_Data[4]_INST_0_i_3_n_0 " type="logic">
+      <obj_property name="ElementShortName">\R_Data[4]_INST_0_i_3_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\R_Data[4]_INST_0_i_3_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\R_Data[4]_INST_0_i_4_n_0 " type="logic">
+      <obj_property name="ElementShortName">\R_Data[4]_INST_0_i_4_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\R_Data[4]_INST_0_i_4_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\R_Data[4]_INST_0_i_5_n_0 " type="logic">
+      <obj_property name="ElementShortName">\R_Data[4]_INST_0_i_5_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\R_Data[4]_INST_0_i_5_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\R_Data[4]_INST_0_i_6_n_0 " type="logic">
+      <obj_property name="ElementShortName">\R_Data[4]_INST_0_i_6_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\R_Data[4]_INST_0_i_6_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\R_Data[4]_INST_0_i_7_n_0 " type="logic">
+      <obj_property name="ElementShortName">\R_Data[4]_INST_0_i_7_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\R_Data[4]_INST_0_i_7_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\R_Data[5]_INST_0_i_2_n_0 " type="logic">
+      <obj_property name="ElementShortName">\R_Data[5]_INST_0_i_2_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\R_Data[5]_INST_0_i_2_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\R_Data[5]_INST_0_i_3_n_0 " type="logic">
+      <obj_property name="ElementShortName">\R_Data[5]_INST_0_i_3_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\R_Data[5]_INST_0_i_3_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\R_Data[5]_INST_0_i_4_n_0 " type="logic">
+      <obj_property name="ElementShortName">\R_Data[5]_INST_0_i_4_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\R_Data[5]_INST_0_i_4_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\R_Data[5]_INST_0_i_5_n_0 " type="logic">
+      <obj_property name="ElementShortName">\R_Data[5]_INST_0_i_5_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\R_Data[5]_INST_0_i_5_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\R_Data[5]_INST_0_i_6_n_0 " type="logic">
+      <obj_property name="ElementShortName">\R_Data[5]_INST_0_i_6_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\R_Data[5]_INST_0_i_6_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\R_Data[5]_INST_0_i_7_n_0 " type="logic">
+      <obj_property name="ElementShortName">\R_Data[5]_INST_0_i_7_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\R_Data[5]_INST_0_i_7_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\R_Data[6]_INST_0_i_2_n_0 " type="logic">
+      <obj_property name="ElementShortName">\R_Data[6]_INST_0_i_2_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\R_Data[6]_INST_0_i_2_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\R_Data[6]_INST_0_i_3_n_0 " type="logic">
+      <obj_property name="ElementShortName">\R_Data[6]_INST_0_i_3_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\R_Data[6]_INST_0_i_3_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\R_Data[6]_INST_0_i_4_n_0 " type="logic">
+      <obj_property name="ElementShortName">\R_Data[6]_INST_0_i_4_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\R_Data[6]_INST_0_i_4_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\R_Data[6]_INST_0_i_5_n_0 " type="logic">
+      <obj_property name="ElementShortName">\R_Data[6]_INST_0_i_5_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\R_Data[6]_INST_0_i_5_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\R_Data[6]_INST_0_i_6_n_0 " type="logic">
+      <obj_property name="ElementShortName">\R_Data[6]_INST_0_i_6_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\R_Data[6]_INST_0_i_6_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\R_Data[6]_INST_0_i_7_n_0 " type="logic">
+      <obj_property name="ElementShortName">\R_Data[6]_INST_0_i_7_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\R_Data[6]_INST_0_i_7_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\R_Data[7]_INST_0_i_2_n_0 " type="logic">
+      <obj_property name="ElementShortName">\R_Data[7]_INST_0_i_2_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\R_Data[7]_INST_0_i_2_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\R_Data[7]_INST_0_i_3_n_0 " type="logic">
+      <obj_property name="ElementShortName">\R_Data[7]_INST_0_i_3_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\R_Data[7]_INST_0_i_3_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\R_Data[7]_INST_0_i_4_n_0 " type="logic">
+      <obj_property name="ElementShortName">\R_Data[7]_INST_0_i_4_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\R_Data[7]_INST_0_i_4_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\R_Data[7]_INST_0_i_5_n_0 " type="logic">
+      <obj_property name="ElementShortName">\R_Data[7]_INST_0_i_5_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\R_Data[7]_INST_0_i_5_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\R_Data[7]_INST_0_i_6_n_0 " type="logic">
+      <obj_property name="ElementShortName">\R_Data[7]_INST_0_i_6_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\R_Data[7]_INST_0_i_6_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\R_Data[7]_INST_0_i_7_n_0 " type="logic">
+      <obj_property name="ElementShortName">\R_Data[7]_INST_0_i_7_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\R_Data[7]_INST_0_i_7_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/R_en" type="logic">
+      <obj_property name="ElementShortName">R_en</obj_property>
+      <obj_property name="ObjectShortName">R_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/RegFile" type="array">
+      <obj_property name="ElementShortName">RegFile[7:0]</obj_property>
+      <obj_property name="ObjectShortName">RegFile[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[0][0]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[0][0]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[0][0]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[0][1]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[0][1]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[0][1]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[0][2]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[0][2]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[0][2]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[0][3]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[0][3]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[0][3]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[0][4]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[0][4]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[0][4]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[0][5]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[0][5]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[0][5]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[0][6]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[0][6]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[0][6]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[0][7]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[0][7]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[0][7]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[0]__0 " type="array">
+      <obj_property name="ElementShortName">\RegFile[0]__0 [7:0]</obj_property>
+      <obj_property name="ObjectShortName">\RegFile[0]__0 [7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[10] " type="array">
+      <obj_property name="ElementShortName">\RegFile[10] [7:0]</obj_property>
+      <obj_property name="ObjectShortName">\RegFile[10] [7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[10][0]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[10][0]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[10][0]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[10][1]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[10][1]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[10][1]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[10][2]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[10][2]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[10][2]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[10][3]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[10][3]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[10][3]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[10][4]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[10][4]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[10][4]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[10][5]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[10][5]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[10][5]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[10][6]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[10][6]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[10][6]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[10][7]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[10][7]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[10][7]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[11] " type="array">
+      <obj_property name="ElementShortName">\RegFile[11] [7:0]</obj_property>
+      <obj_property name="ObjectShortName">\RegFile[11] [7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[11][0]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[11][0]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[11][0]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[11][1]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[11][1]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[11][1]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[11][2]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[11][2]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[11][2]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[11][3]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[11][3]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[11][3]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[11][4]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[11][4]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[11][4]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[11][5]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[11][5]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[11][5]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[11][6]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[11][6]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[11][6]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[11][7]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[11][7]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[11][7]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[12] " type="array">
+      <obj_property name="ElementShortName">\RegFile[12] [7:0]</obj_property>
+      <obj_property name="ObjectShortName">\RegFile[12] [7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[12][0]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[12][0]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[12][0]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[12][1]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[12][1]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[12][1]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[12][2]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[12][2]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[12][2]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[12][3]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[12][3]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[12][3]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[12][4]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[12][4]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[12][4]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[12][5]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[12][5]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[12][5]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[12][6]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[12][6]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[12][6]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[12][7]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[12][7]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[12][7]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[13] " type="array">
+      <obj_property name="ElementShortName">\RegFile[13] [7:0]</obj_property>
+      <obj_property name="ObjectShortName">\RegFile[13] [7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[13][0]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[13][0]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[13][0]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[13][1]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[13][1]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[13][1]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[13][2]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[13][2]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[13][2]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[13][3]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[13][3]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[13][3]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[13][4]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[13][4]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[13][4]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[13][5]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[13][5]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[13][5]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[13][6]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[13][6]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[13][6]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[13][7]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[13][7]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[13][7]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[14] " type="array">
+      <obj_property name="ElementShortName">\RegFile[14] [7:0]</obj_property>
+      <obj_property name="ObjectShortName">\RegFile[14] [7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[14][0]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[14][0]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[14][0]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[14][1]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[14][1]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[14][1]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[14][2]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[14][2]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[14][2]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[14][3]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[14][3]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[14][3]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[14][4]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[14][4]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[14][4]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[14][5]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[14][5]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[14][5]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[14][6]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[14][6]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[14][6]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[14][7]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[14][7]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[14][7]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[15] " type="array">
+      <obj_property name="ElementShortName">\RegFile[15] [7:0]</obj_property>
+      <obj_property name="ObjectShortName">\RegFile[15] [7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[15][0]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[15][0]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[15][0]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[15][1]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[15][1]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[15][1]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[15][2]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[15][2]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[15][2]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[15][3]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[15][3]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[15][3]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[15][4]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[15][4]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[15][4]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[15][5]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[15][5]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[15][5]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[15][6]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[15][6]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[15][6]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[15][7]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[15][7]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[15][7]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[1][0]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[1][0]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[1][0]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[1][1]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[1][1]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[1][1]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[1][2]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[1][2]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[1][2]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[1][3]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[1][3]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[1][3]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[1][4]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[1][4]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[1][4]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[1][5]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[1][5]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[1][5]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[1][6]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[1][6]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[1][6]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[1][7]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[1][7]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[1][7]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[1]__0 " type="array">
+      <obj_property name="ElementShortName">\RegFile[1]__0 [7:0]</obj_property>
+      <obj_property name="ObjectShortName">\RegFile[1]__0 [7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[2][0]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[2][0]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[2][0]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[2][1]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[2][1]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[2][1]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[2][2]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[2][2]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[2][2]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[2][3]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[2][3]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[2][3]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[2][4]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[2][4]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[2][4]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[2][5]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[2][5]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[2][5]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[2][6]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[2][6]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[2][6]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[2][7]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[2][7]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[2][7]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[2]__0 " type="array">
+      <obj_property name="ElementShortName">\RegFile[2]__0 [7:0]</obj_property>
+      <obj_property name="ObjectShortName">\RegFile[2]__0 [7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[3][0]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[3][0]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[3][0]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[3][1]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[3][1]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[3][1]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[3][2]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[3][2]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[3][2]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[3][3]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[3][3]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[3][3]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[3][4]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[3][4]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[3][4]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[3][5]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[3][5]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[3][5]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[3][6]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[3][6]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[3][6]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[3][7]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[3][7]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[3][7]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[3]__0 " type="array">
+      <obj_property name="ElementShortName">\RegFile[3]__0 [7:0]</obj_property>
+      <obj_property name="ObjectShortName">\RegFile[3]__0 [7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[4][0]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[4][0]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[4][0]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[4][1]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[4][1]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[4][1]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[4][2]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[4][2]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[4][2]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[4][3]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[4][3]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[4][3]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[4][4]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[4][4]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[4][4]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[4][5]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[4][5]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[4][5]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[4][6]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[4][6]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[4][6]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[4][7]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[4][7]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[4][7]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[4]__0 " type="array">
+      <obj_property name="ElementShortName">\RegFile[4]__0 [7:0]</obj_property>
+      <obj_property name="ObjectShortName">\RegFile[4]__0 [7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[5][0]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[5][0]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[5][0]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[5][1]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[5][1]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[5][1]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[5][2]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[5][2]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[5][2]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[5][3]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[5][3]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[5][3]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[5][4]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[5][4]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[5][4]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[5][5]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[5][5]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[5][5]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[5][6]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[5][6]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[5][6]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[5][7]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[5][7]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[5][7]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[5]__0 " type="array">
+      <obj_property name="ElementShortName">\RegFile[5]__0 [7:0]</obj_property>
+      <obj_property name="ObjectShortName">\RegFile[5]__0 [7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[6][0]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[6][0]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[6][0]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[6][1]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[6][1]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[6][1]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[6][2]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[6][2]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[6][2]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[6][3]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[6][3]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[6][3]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[6][4]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[6][4]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[6][4]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[6][5]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[6][5]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[6][5]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[6][6]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[6][6]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[6][6]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[6][7]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[6][7]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[6][7]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[6]__0 " type="array">
+      <obj_property name="ElementShortName">\RegFile[6]__0 [7:0]</obj_property>
+      <obj_property name="ObjectShortName">\RegFile[6]__0 [7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[7][0]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[7][0]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[7][0]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[7][1]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[7][1]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[7][1]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[7][2]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[7][2]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[7][2]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[7][3]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[7][3]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[7][3]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[7][4]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[7][4]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[7][4]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[7][5]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[7][5]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[7][5]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[7][6]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[7][6]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[7][6]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[7][7]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[7][7]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[7][7]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[7]__0 " type="array">
+      <obj_property name="ElementShortName">\RegFile[7]__0 [7:0]</obj_property>
+      <obj_property name="ObjectShortName">\RegFile[7]__0 [7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[8] " type="array">
+      <obj_property name="ElementShortName">\RegFile[8] [7:0]</obj_property>
+      <obj_property name="ObjectShortName">\RegFile[8] [7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[8][0]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[8][0]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[8][0]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[8][1]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[8][1]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[8][1]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[8][2]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[8][2]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[8][2]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[8][3]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[8][3]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[8][3]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[8][4]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[8][4]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[8][4]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[8][5]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[8][5]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[8][5]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[8][6]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[8][6]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[8][6]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[8][7]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[8][7]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[8][7]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[9] " type="array">
+      <obj_property name="ElementShortName">\RegFile[9] [7:0]</obj_property>
+      <obj_property name="ObjectShortName">\RegFile[9] [7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[9][0]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[9][0]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[9][0]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[9][1]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[9][1]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[9][1]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[9][2]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[9][2]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[9][2]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[9][3]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[9][3]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[9][3]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[9][4]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[9][4]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[9][4]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[9][5]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[9][5]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[9][5]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[9][6]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[9][6]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[9][6]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/\RegFile[9][7]_i_1_n_0 " type="logic">
+      <obj_property name="ElementShortName">\RegFile[9][7]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\RegFile[9][7]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/Rst" type="logic">
+      <obj_property name="ElementShortName">Rst</obj_property>
+      <obj_property name="ObjectShortName">Rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/W_Addr" type="array">
+      <obj_property name="ElementShortName">W_Addr[3:0]</obj_property>
+      <obj_property name="ObjectShortName">W_Addr[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/W_Data" type="array">
+      <obj_property name="ElementShortName">W_Data[7:0]</obj_property>
+      <obj_property name="ObjectShortName">W_Data[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/LabExam_sim/ins1/rf1/W_en" type="logic">
+      <obj_property name="ElementShortName">W_en</obj_property>
+      <obj_property name="ObjectShortName">W_en</obj_property>
+   </wvobject>
+</wave_config>

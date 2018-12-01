@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="datapath_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="datapath_tb" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="4000000001fs"></ZoomEndTime>
+      <Cursor1Time time="168977000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="177"></NameColumnWidth>
+      <ValueColumnWidth column_width="132"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="5" />
+   <wvobject fp_name="group2293" type="group">
+      <obj_property name="label">g1</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/datapath_tb/Clk_tb" type="logic">
+         <obj_property name="ElementShortName">Clk_tb</obj_property>
+         <obj_property name="ObjectShortName">Clk_tb</obj_property>
+      </wvobject>
+      <wvobject fp_name="/datapath_tb/Rst_tb" type="logic">
+         <obj_property name="ElementShortName">Rst_tb</obj_property>
+         <obj_property name="ObjectShortName">Rst_tb</obj_property>
+      </wvobject>
+      <wvobject fp_name="/datapath_tb/d1/i1/Instruction" type="array">
+         <obj_property name="ElementShortName">Instruction[31:0]</obj_property>
+         <obj_property name="ObjectShortName">Instruction[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/datapath_tb/d1/a4/debug_Reg8" type="array">
+         <obj_property name="ElementShortName">debug_Reg8[31:0]</obj_property>
+         <obj_property name="ObjectShortName">debug_Reg8[31:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/datapath_tb/d1/a4/debug_Reg16" type="array">
+         <obj_property name="ElementShortName">debug_Reg16[31:0]</obj_property>
+         <obj_property name="ObjectShortName">debug_Reg16[31:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/datapath_tb/d1/a4/debug_Reg17" type="array">
+         <obj_property name="ElementShortName">debug_Reg17[31:0]</obj_property>
+         <obj_property name="ObjectShortName">debug_Reg17[31:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/datapath_tb/d1/a4/debug_Reg18" type="array">
+         <obj_property name="ElementShortName">debug_Reg18[31:0]</obj_property>
+         <obj_property name="ObjectShortName">debug_Reg18[31:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/datapath_tb/d1/a4/debug_Reg19" type="array">
+         <obj_property name="ElementShortName">debug_Reg19[31:0]</obj_property>
+         <obj_property name="ObjectShortName">debug_Reg19[31:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/datapath_tb/d1/alu/ALUControl" type="array">
+         <obj_property name="ElementShortName">ALUControl[3:0]</obj_property>
+         <obj_property name="ObjectShortName">ALUControl[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/datapath_tb/d1/alu/ALUResult" type="array">
+         <obj_property name="ElementShortName">ALUResult[31:0]</obj_property>
+         <obj_property name="ObjectShortName">ALUResult[31:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/datapath_tb/d1/alu/A" type="array">
+         <obj_property name="ElementShortName">A[31:0]</obj_property>
+         <obj_property name="ObjectShortName">A[31:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/datapath_tb/d1/alu/B" type="array">
+         <obj_property name="ElementShortName">B[31:0]</obj_property>
+         <obj_property name="ObjectShortName">B[31:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/datapath_tb/d1/pc1/PCResult" type="array">
+         <obj_property name="ElementShortName">PCResult[31:0]</obj_property>
+         <obj_property name="ObjectShortName">PCResult[31:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/datapath_tb/d1/dm1/memory" type="array">
+         <obj_property name="ElementShortName">memory[0:1023][31:0]</obj_property>
+         <obj_property name="ObjectShortName">memory[0:1023][31:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group2320" type="group">
+      <obj_property name="label">controller</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/datapath_tb/d1/c1/Op" type="array">
+         <obj_property name="ElementShortName">Op[5:0]</obj_property>
+         <obj_property name="ObjectShortName">Op[5:0]</obj_property>
+         <obj_property name="Radix">BINARYRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/datapath_tb/d1/c1/func" type="array">
+         <obj_property name="ElementShortName">func[5:0]</obj_property>
+         <obj_property name="ObjectShortName">func[5:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/datapath_tb/d1/c1/ALU_Result" type="array">
+         <obj_property name="ElementShortName">ALU_Result[31:0]</obj_property>
+         <obj_property name="ObjectShortName">ALU_Result[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/datapath_tb/d1/c1/ALUOp" type="array">
+         <obj_property name="ElementShortName">ALUOp[3:0]</obj_property>
+         <obj_property name="ObjectShortName">ALUOp[3:0]</obj_property>
+         <obj_property name="Radix">BINARYRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/datapath_tb/d1/c1/RegDst" type="logic">
+         <obj_property name="ElementShortName">RegDst</obj_property>
+         <obj_property name="ObjectShortName">RegDst</obj_property>
+      </wvobject>
+      <wvobject fp_name="/datapath_tb/d1/c1/RegWrite" type="logic">
+         <obj_property name="ElementShortName">RegWrite</obj_property>
+         <obj_property name="ObjectShortName">RegWrite</obj_property>
+      </wvobject>
+      <wvobject fp_name="/datapath_tb/d1/c1/ALUSrc" type="logic">
+         <obj_property name="ElementShortName">ALUSrc</obj_property>
+         <obj_property name="ObjectShortName">ALUSrc</obj_property>
+      </wvobject>
+      <wvobject fp_name="/datapath_tb/d1/c1/MemRead" type="logic">
+         <obj_property name="ElementShortName">MemRead</obj_property>
+         <obj_property name="ObjectShortName">MemRead</obj_property>
+      </wvobject>
+      <wvobject fp_name="/datapath_tb/d1/c1/MemWrite" type="logic">
+         <obj_property name="ElementShortName">MemWrite</obj_property>
+         <obj_property name="ObjectShortName">MemWrite</obj_property>
+      </wvobject>
+      <wvobject fp_name="/datapath_tb/d1/c1/MemtoReg" type="logic">
+         <obj_property name="ElementShortName">MemtoReg</obj_property>
+         <obj_property name="ObjectShortName">MemtoReg</obj_property>
+      </wvobject>
+      <wvobject fp_name="/datapath_tb/d1/c1/shl_sel" type="logic">
+         <obj_property name="ElementShortName">shl_sel</obj_property>
+         <obj_property name="ObjectShortName">shl_sel</obj_property>
+      </wvobject>
+      <wvobject fp_name="/datapath_tb/d1/c1/shr_sel" type="logic">
+         <obj_property name="ElementShortName">shr_sel</obj_property>
+         <obj_property name="ObjectShortName">shr_sel</obj_property>
+      </wvobject>
+      <wvobject fp_name="/datapath_tb/d1/c1/PCSrc" type="logic">
+         <obj_property name="ElementShortName">PCSrc</obj_property>
+         <obj_property name="ObjectShortName">PCSrc</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group2334" type="group">
+      <obj_property name="label">mux3</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/datapath_tb/d1/m3/out" type="array">
+         <obj_property name="ElementShortName">out[31:0]</obj_property>
+         <obj_property name="ObjectShortName">out[31:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/datapath_tb/d1/m3/inA" type="array">
+         <obj_property name="ElementShortName">inA[31:0]</obj_property>
+         <obj_property name="ObjectShortName">inA[31:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/datapath_tb/d1/m3/inB" type="array">
+         <obj_property name="ElementShortName">inB[31:0]</obj_property>
+         <obj_property name="ObjectShortName">inB[31:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/datapath_tb/d1/m3/sel" type="logic">
+         <obj_property name="ElementShortName">sel</obj_property>
+         <obj_property name="ObjectShortName">sel</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group2335" type="group">
+      <obj_property name="label">mux4</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/datapath_tb/d1/m4/out" type="array">
+         <obj_property name="ElementShortName">out[31:0]</obj_property>
+         <obj_property name="ObjectShortName">out[31:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/datapath_tb/d1/m4/inA" type="array">
+         <obj_property name="ElementShortName">inA[31:0]</obj_property>
+         <obj_property name="ObjectShortName">inA[31:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/datapath_tb/d1/m4/inB" type="array">
+         <obj_property name="ElementShortName">inB[31:0]</obj_property>
+         <obj_property name="ObjectShortName">inB[31:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/datapath_tb/d1/m4/sel" type="logic">
+         <obj_property name="ElementShortName">sel</obj_property>
+         <obj_property name="ObjectShortName">sel</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group2344" type="group">
+      <obj_property name="label">regfile</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/datapath_tb/d1/a4/WriteData" type="array">
+         <obj_property name="ElementShortName">WriteData[31:0]</obj_property>
+         <obj_property name="ObjectShortName">WriteData[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/datapath_tb/d1/a4/ReadRegister1" type="array">
+         <obj_property name="ElementShortName">ReadRegister1[4:0]</obj_property>
+         <obj_property name="ObjectShortName">ReadRegister1[4:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/datapath_tb/d1/a4/ReadRegister2" type="array">
+         <obj_property name="ElementShortName">ReadRegister2[4:0]</obj_property>
+         <obj_property name="ObjectShortName">ReadRegister2[4:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/datapath_tb/d1/a4/WriteRegister" type="array">
+         <obj_property name="ElementShortName">WriteRegister[4:0]</obj_property>
+         <obj_property name="ObjectShortName">WriteRegister[4:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/datapath_tb/d1/a4/RegWrite" type="logic">
+         <obj_property name="ElementShortName">RegWrite</obj_property>
+         <obj_property name="ObjectShortName">RegWrite</obj_property>
+      </wvobject>
+      <wvobject fp_name="/datapath_tb/d1/a4/Clk" type="logic">
+         <obj_property name="ElementShortName">Clk</obj_property>
+         <obj_property name="ObjectShortName">Clk</obj_property>
+      </wvobject>
+      <wvobject fp_name="/datapath_tb/d1/a4/ReadData1" type="array">
+         <obj_property name="ElementShortName">ReadData1[31:0]</obj_property>
+         <obj_property name="ObjectShortName">ReadData1[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/datapath_tb/d1/a4/ReadData2" type="array">
+         <obj_property name="ElementShortName">ReadData2[31:0]</obj_property>
+         <obj_property name="ObjectShortName">ReadData2[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/datapath_tb/d1/a4/x" type="array">
+         <obj_property name="ElementShortName">x[31:0]</obj_property>
+         <obj_property name="ObjectShortName">x[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/datapath_tb/d1/a4/RegFile" type="array">
+         <obj_property name="ElementShortName">RegFile[0:31][31:0]</obj_property>
+         <obj_property name="ObjectShortName">RegFile[0:31][31:0]</obj_property>
+      </wvobject>
+   </wvobject>
+</wave_config>
