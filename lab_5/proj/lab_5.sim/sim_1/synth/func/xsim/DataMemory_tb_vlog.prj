@@ -1,7 +1,0 @@
-# compile verilog/system verilog design source files
-verilog xil_defaultlib  \
-"DataMemory_tb_func_synth.v" \
-"../../../../../../comps/DataMemory/DataMemory_sim.v" \
-
-# Do not sort compile order
-nosort
