@@ -1,0 +1,19 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../../datapath/datapath.v" \
+"../../../../../datapath/controller.v" \
+"../../../../../comps/SignExt/signext.v" \
+"../../../../../comps/PCAdder/PCAdder.v" \
+"../../../../../comps/2x1mux_32/mux2x1.v" \
+"../../../../../comps/PC/pc.v" \
+"../../../../../comps/ALU32Bit/ALU32Bit.v" \
+"../../../../../comps/DataMemory/DataMemory.v" \
+"../../../../../comps/InstrMemory/InstrMemory.v" \
+"../../../../../comps/RegisterFile/RegisterFile.v" \
+"../../../../../datapath/datapath_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
