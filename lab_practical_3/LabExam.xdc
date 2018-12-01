@@ -20,8 +20,8 @@ set_property PACKAGE_PIN U13 [get_ports {en_out[7]}]
 
 ##----------------------------------------------------------------------------
 ##This part is to assign a pin number to 100MHz clock signal
-set_property PACKAGE_PIN E3 [get_ports Clk]
-set_property IOSTANDARD LVCMOS33 [get_ports Clk]
+set_property PACKAGE_PIN E3 [get_ports Clk_unscaled]
+set_property IOSTANDARD LVCMOS33 [get_ports Clk_unscaled]
 ##----------------------------------------------------------------------------
 
 ##----------------------------------------------------------------------------
@@ -46,22 +46,30 @@ set_property PACKAGE_PIN L18 [get_ports {out7[0]}]
 ##----------------------------------------------------------------------------
 ## TODO HERE
 ## Here takes care the button for the go
-set_property IOSTANDARD LVCMOS33 [get_ports {candy}]
-set_property PACKAGE_PIN T15 [get_ports {candy}]
+set_property IOSTANDARD LVCMOS33 [get_ports {go}]
+set_property PACKAGE_PIN N17 [get_ports {go}]
 ##----------------------------------------------------------------------------
 
 
 ##----------------------------------------------------------------------------
 ## TODO HERE
 ## Here takes care the button for the reset
-set_property IOSTANDARD LVCMOS33 [get_ports {RST}]
-set_property PACKAGE_PIN M18 [get_ports {RST}]
+set_property IOSTANDARD LVCMOS33 [get_ports {Rst}]
+set_property PACKAGE_PIN P18 [get_ports {Rst}]
 ##----------------------------------------------------------------------------
 
 
 ##----------------------------------------------------------------------------
 ## TODO HERE
 ## Here takes care the led for done
-set_property IOSTANDARD LVCMOS33 [get_ports {RST}]
-set_property PACKAGE_PIN M18 [get_ports {RST}]
+set_property IOSTANDARD LVCMOS33 [get_ports {done}]
+set_property PACKAGE_PIN H17 [get_ports {done}]
+##----------------------------------------------------------------------------
+
+
+##----------------------------------------------------------------------------
+## TODO HERE
+## Here takes care the led for Clk_unscaled
+##set_property IOSTANDARD LVCMOS33 [get_ports {Clk_unscaled}]
+##set_property PACKAGE_PIN J13 [get_ports {Clk_unscaled}]
 ##----------------------------------------------------------------------------

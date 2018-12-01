@@ -4,7 +4,7 @@ module RegFile16x8(R_Addr, W_Addr, R_en, W_en, R_Data, W_Data, Clk, Rst,
 					debug_Reg4, debug_Reg5, debug_Reg6, debug_Reg7,
 					debug_Reg8, debug_Reg9, debug_Reg10, debug_Reg11,
 					debug_Reg12, debug_Reg13, debug_Reg14, debug_Reg15);
-					
+	
 	input [3:0] R_Addr, W_Addr;
 	input Clk, Rst, R_en, W_en;
 	output reg [7:0] R_Data;
@@ -17,7 +17,7 @@ module RegFile16x8(R_Addr, W_Addr, R_en, W_en, R_Data, W_Data, Clk, Rst,
 					debug_Reg4, debug_Reg5, debug_Reg6, debug_Reg7,
 					debug_Reg8, debug_Reg9, debug_Reg10, debug_Reg11,
 					debug_Reg12, debug_Reg13, debug_Reg14, debug_Reg15;
-					
+	
 	
 	// Write procedure
 	

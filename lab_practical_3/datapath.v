@@ -1,14 +1,14 @@
 // The behavioral HLSM for Lab Exam 3?
 `timescale 1ns/1ps
 
-module LabExam(Clk, Rst, go, count, done, out7, scr_out);
-	input Clk, Rst;
+module LabExam(Clk_unscaled, Clk, Rst, go, count, done, out7, scr_out);
+	input Clk, Clk_unscaled, Rst;
 	input go;
 
 	output reg [6:0] count;
 	output reg done;
-	output reg [7:0] scr_out;
-	output reg [6:0] out7;
+	output wire [7:0] scr_out;
+	output wire [6:0] out7;
 
 	// Local storage
 	reg [4:0] i;
@@ -46,7 +46,7 @@ module LabExam(Clk, Rst, go, count, done, out7, scr_out);
 					debug_Reg8, debug_Reg9, debug_Reg10, debug_Reg11,
 					debug_Reg12, debug_Reg13, debug_Reg14, debug_Reg15);
 
-	TwoDigitDisplay disp1(Clk, disp_temp, out7, scr_out);
+	TwoDigitDisplay disp1(Clk_unscaled, disp_temp, out7, scr_out);
 	
 	// Things need to be updated at pos clk
 	always @(posedge Clk)
@@ -76,9 +76,12 @@ module LabExam(Clk, Rst, go, count, done, out7, scr_out);
 				end
 
 				POST_DONE: begin
-					disp_temp <= A;
-					if( i < 16 ) i <= i + 1;
-					else i <= 0;
+					if( Rst == 1) state <= INIT;
+					else begin
+						disp_temp <= A;
+						if( i < 16 ) i <= i + 1;
+						else i <= 0;
+					end
 				end
 
 				SET_TEMP: begin
@@ -115,14 +118,13 @@ module LabExam(Clk, Rst, go, count, done, out7, scr_out);
 
 
 	// Things need to be updated upon other change of variables
-	always @(state, go, i, count) // The conditions may have issues
+	always @(state, go, i, count, temp) // The conditions may have issues
 	begin
 		R_en	<= 0;
 		W_en	<= 0;
-
+        done <= 0;
 		case(state)
 			INIT: begin
-				done <= 0;
 				if(go == 1) statenext <= STBY;
 				else statenext <= INIT;
 			end
@@ -147,6 +149,7 @@ module LabExam(Clk, Rst, go, count, done, out7, scr_out);
 
 			POST_DONE: begin
 				done <= 1;
+				R_en <= 1;
 				statenext <= POST_DONE;
 			end
 
