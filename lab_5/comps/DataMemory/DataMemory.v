@@ -39,22 +39,20 @@ module DataMemory(Address, WriteData, Clk, MemWrite, MemRead, ReadData);
     input Clk;
     input MemWrite; 		// Control signal for memory write aka. ENABLE
     input MemRead; 		// Control signal for memory read 
-
+    
     output reg[31:0] ReadData; 	// Contents of memory location at Address
 
-	// integer for initialize the DataMemory to 0
-	integer i;
-    
     reg [31:0] memory [0:1023];	// This memory is 32-bit deep, contains 1024 individual elements
+    
+    integer i;
+    initial begin
+        i = 0;
+        while(i < 1024) begin
+            memory[i] <= 32'h0;
+            i = i + 1;
+        end
+    end 
 
-	initial begin
-		i = 0;
-		while(i < 1024) begin
-			memory[i] <= 32'h0;
-			i = i + 1;
-		end
-	end
-	
 	always @(posedge Clk) begin	
 				// Write Data into memory at rising edge of
 				// the clock
