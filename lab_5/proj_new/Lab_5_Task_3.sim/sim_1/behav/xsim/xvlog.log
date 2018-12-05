@@ -1,0 +1,22 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Ray/Desktop/DigLogic-Task_3/lab_5/comps/ALU32Bit/ALU32Bit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU32Bit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Ray/Desktop/DigLogic-Task_3/lab_5/comps/DataMemory/DataMemory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataMemory
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Ray/Desktop/DigLogic-Task_3/lab_5/comps/InstrMemory/InstructionMemory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InstructionMemory
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Ray/Desktop/DigLogic-Task_3/lab_5/comps/PCAdder/PCAdder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PCAdder
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Ray/Desktop/DigLogic-Task_3/lab_5/comps/RegisterFile/RegisterFile.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RegisterFile
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Ray/Desktop/DigLogic-Task_3/lab_5/datapath/controller.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Controller
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Ray/Desktop/DigLogic-Task_3/lab_5/datapath/datapath.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Datapath_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Ray/Desktop/DigLogic-Task_3/lab_5/comps/2x1mux_32/mux2x1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Mux32Bit2To1
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Ray/Desktop/DigLogic-Task_3/lab_5/comps/PC/pc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ProgramCounter
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Ray/Desktop/DigLogic-Task_3/lab_5/comps/SignExt/signext.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SignExtention
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Ray/Desktop/DigLogic-Task_3/lab_5/datapath/datapath_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module datapath_tb

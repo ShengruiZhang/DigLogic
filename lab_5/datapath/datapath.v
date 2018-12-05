@@ -7,8 +7,8 @@ module Datapath_top(Clk, Reset, debug_Reg23);
 
     //--// Add below for post synthesis simulation //--//
     (* mark_debug = "true" *)
-    wire [31:0] debug_Reg8, debug_Reg16, debug_Reg17, debug_Reg18, debug_Reg19, debug_Reg20, debug_Reg21, debug_Reg22, debug_Reg23;
-        
+    wire [31:0] debug_Reg19, debug_Reg20, debug_Reg21, debug_Reg22, debug_Reg23;
+	
     // Wires from Controller
     wire shl_sel;
     wire RegDst;
@@ -56,6 +56,7 @@ module Datapath_top(Clk, Reset, debug_Reg23);
     //Wires for ALU2
     wire [31:0] shl2toalu3;
     wire [31:0] alu2_oup;
+	wire empty;
     
     Controller c1(Instr[31:26], Instr[5:0], RegDst, RegWrite, ALUSrc, MemRead, MemWrite, MemtoReg, PCSrc, ALUOp[3:0], shl_sel, shr_sel);
     ProgramCounter pc1(m6toPC, PCResult, Reset, Clk);
@@ -71,13 +72,12 @@ module Datapath_top(Clk, Reset, debug_Reg23);
     
     SignExtention se1(Instr[15:0], se1_out);
     ALU32Bit alu(ALUOp, RegData1, m4toALU, ALU_oup, zero);
-    ALU32Bit alu2(4'b0000, pcadder_oup, (se1_out << 2), alu2_oup);
+    ALU32Bit alu2(4'b0000, pcadder_oup, (se1_out << 2), alu2_oup, empty);
     PCAdder pcadd1(PCResult, pcadder_oup);
 
-    //--// ?? is your job to map the correct signals to this       
-    //--// RegisterFile. The purpose of this to show you how to  
-    //--// retain the signal for post-synthesis simulation
-
-    RegisterFile a4(RegRead1[4:0], Instr[20:16], WriteReg[4:0], MuxOut_DataMem, RegWrite, Clk, RegData1, RegData2, debug_Reg8, debug_Reg16, debug_Reg17, debug_Reg18, debug_Reg19, debug_Reg20, debug_Reg21, debug_Reg22, debug_Reg23);
+	//RegisterFile(ReadRegister1, ReadRegister2, WriteRegister, WriteData, RegWrite, Clk, ReadData1, ReadData2,
+					//debug_Reg19, debug_Reg20, debug_Reg21, debug_Reg22, debug_Reg23);
+    RegisterFile a4(RegRead1[4:0], Instr[20:16], WriteReg[4:0], MuxOut_DataMem, RegWrite, Clk, RegData1, RegData2,
+					debug_Reg19, debug_Reg20, debug_Reg21, debug_Reg22, debug_Reg23);
 
 endmodule

@@ -3,20 +3,21 @@
 module Controller(Op, func, RegDst, RegWrite, ALUSrc, MemRead, MemWrite, MemtoReg, PCSrc, ALUOp, shl_sel, shr_sel);
 	input [5:0] Op;
 	input [5:0] func;
-	//input [31:0] ALU_Result;
+
 	output reg RegDst, RegWrite, ALUSrc, MemRead, MemWrite, MemtoReg, PCSrc, shl_sel, shr_sel;
 	output reg [3:0] ALUOp;
 	
     always @* begin
-	   ALUSrc <= 0;
-	   RegDst <= 1;
-	   RegWrite <= 1;
-	   MemRead <= 0;
-	   MemWrite <= 0;
-	   MemtoReg <= 0;
-	   PCSrc <= 0;
-	   shl_sel <= 0;
-	   shr_sel <= 0;
+	
+	   ALUSrc	<= 0;
+	   RegDst	<= 1;
+	   RegWrite	<= 1;
+	   MemRead	<= 0;
+	   MemWrite	<= 0;
+	   MemtoReg	<= 0;
+	   PCSrc	<= 0;
+	   shl_sel	<= 0;
+	   shr_sel	<= 0;
 
 	   case(Op)
 			6'b00000000: begin
@@ -87,59 +88,61 @@ module Controller(Op, func, RegDst, RegWrite, ALUSrc, MemRead, MemWrite, MemtoRe
 
 			end
             
-            //addi
+            // ADDI
 			6'b001000: begin
-				ALUSrc <= 1;
-				RegDst <= 0;
-				ALUOp <= 4'b0000;
+				ALUSrc	<= 1;
+				RegDst	<= 0;
+				ALUOp 	<= 4'b0000;
 			end
             
-            //ori
+            // ORI
 			6'b001101: begin
-				ALUSrc <= 1;
-				RegDst <= 0;
-				ALUOp <= 4'b0100;
+				ALUSrc	<= 1;
+				RegDst	<= 0;
+				ALUOp	<= 4'b0100;
 			end
 			
-            // lw	Load word
+            // lW	Load word
             6'b100011: begin
-            RegDst <= 0;
-            RegWrite <= 1;
-            ALUSrc <= 1;
-            ALUOp <= 4'b0000;
-            MemRead <= 1;
-            MemWrite <= 0;
-            MemtoReg <= 1;
-            PCSrc <= 0;
+            RegDst		<= 0;
+            RegWrite	<= 1;
+            ALUSrc		<= 1;
+            ALUOp		<= 4'b0000;
+            MemRead		<= 1;
+            MemWrite	<= 0;
+            MemtoReg	<= 1;
+            PCSrc		<= 0;
             end
             
-            // sw    Store word
+            // SW    Store word
             6'b101011: begin
-            RegDst <= 0;
-            RegWrite <= 0;
-            ALUSrc <= 1;
-            ALUOp <= 4'b0000;
-            MemRead  <= 0;
-            MemWrite <= 1;
-            MemtoReg <= 0;
-            PCSrc <= 0;
+            RegDst		<= 0;
+            RegWrite	<= 0;
+            ALUSrc		<= 1;
+            ALUOp		<= 4'b0000;
+            MemRead		<= 0;
+            MemWrite	<= 1;
+            MemtoReg	<= 0;
+            PCSrc		<= 0;
             //    0 -> B; 1 -> A
             end
             
-            // bne    branch if not equal to
+            // BNE    branch if not equal to
             6'b000101: begin
-            RegDst <= 0;
-            RegWrite <= 0;
-            ALUSrc <= 0;
-            ALUOp <= 4'b0111;
-            MemRead <= 0;
-            MemWrite <= 0;
-            MemtoReg <= 0;
-            PCSrc <= 1;
+            RegDst		<= 0;
+            RegWrite	<= 0;
+            ALUSrc		<= 0;
+            ALUOp		<= 4'b0111;
+            MemRead		<= 0;
+            MemWrite	<= 0;
+            MemtoReg	<= 0;
+            PCSrc		<= 1;
             //    0 -> B; 1 -> A
             end
+			
 		    default: begin 
 		    end
+			
 		endcase
-		end		    
+	end		    
 endmodule

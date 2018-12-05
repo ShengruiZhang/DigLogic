@@ -1,0 +1,16 @@
+0.6
+2018.2
+Jun 14 2018
+20:41:02
+C:/Users/Ray/Desktop/DigLogic-Task_3/lab_5/comps/2x1mux_32/mux2x1.v,1543964448,verilog,,C:/Users/Ray/Desktop/DigLogic-Task_3/lab_5/comps/PC/pc.v,,Mux32Bit2To1,,,,,,,,
+C:/Users/Ray/Desktop/DigLogic-Task_3/lab_5/comps/ALU32Bit/ALU32Bit.v,1543999612,verilog,,C:/Users/Ray/Desktop/DigLogic-Task_3/lab_5/comps/DataMemory/DataMemory.v,,ALU32Bit,,,,,,,,
+C:/Users/Ray/Desktop/DigLogic-Task_3/lab_5/comps/DataMemory/DataMemory.v,1544003478,verilog,,C:/Users/Ray/Desktop/DigLogic-Task_3/lab_5/comps/InstrMemory/InstructionMemory.v,,DataMemory,,,,,,,,
+C:/Users/Ray/Desktop/DigLogic-Task_3/lab_5/comps/InstrMemory/InstructionMemory.v,1544000294,verilog,,C:/Users/Ray/Desktop/DigLogic-Task_3/lab_5/comps/PCAdder/PCAdder.v,,InstructionMemory,,,,,,,,
+C:/Users/Ray/Desktop/DigLogic-Task_3/lab_5/comps/PC/pc.v,1544000323,verilog,,C:/Users/Ray/Desktop/DigLogic-Task_3/lab_5/comps/SignExt/signext.v,,ProgramCounter,,,,,,,,
+C:/Users/Ray/Desktop/DigLogic-Task_3/lab_5/comps/PCAdder/PCAdder.v,1544000338,verilog,,C:/Users/Ray/Desktop/DigLogic-Task_3/lab_5/comps/RegisterFile/RegisterFile.v,,PCAdder,,,,,,,,
+C:/Users/Ray/Desktop/DigLogic-Task_3/lab_5/comps/RegisterFile/RegisterFile.v,1544005253,verilog,,C:/Users/Ray/Desktop/DigLogic-Task_3/lab_5/datapath/controller.v,,RegisterFile,,,,,,,,
+C:/Users/Ray/Desktop/DigLogic-Task_3/lab_5/comps/SignExt/signext.v,1544000395,verilog,,C:/Users/Ray/Desktop/DigLogic-Task_3/lab_5/datapath/datapath_tb.v,,SignExtention,,,,,,,,
+C:/Users/Ray/Desktop/DigLogic-Task_3/lab_5/datapath/controller.v,1544000912,verilog,,C:/Users/Ray/Desktop/DigLogic-Task_3/lab_5/datapath/datapath.v,,Controller,,,,,,,,
+C:/Users/Ray/Desktop/DigLogic-Task_3/lab_5/datapath/datapath.v,1544001615,verilog,,C:/Users/Ray/Desktop/DigLogic-Task_3/lab_5/comps/2x1mux_32/mux2x1.v,,Datapath_top,,,,,,,,
+C:/Users/Ray/Desktop/DigLogic-Task_3/lab_5/datapath/datapath_tb.v,1544001294,verilog,,,,datapath_tb,,,,,,,,
+C:/Users/Ray/Desktop/DigLogic-Task_3/lab_5/proj_new/Lab_5_Task_3.sim/sim_1/behav/xsim/glbl.v,1529022455,verilog,,,,glbl,,,,,,,,
