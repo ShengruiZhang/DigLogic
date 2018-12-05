@@ -86,13 +86,15 @@ module Controller(Op, func, RegDst, RegWrite, ALUSrc, MemRead, MemWrite, MemtoRe
 				end
 
 			end
-
+            
+            //addi
 			6'b001000: begin
 				ALUSrc <= 1;
 				RegDst <= 0;
 				ALUOp <= 4'b0000;
 			end
-
+            
+            //ori
 			6'b001101: begin
 				ALUSrc <= 1;
 				RegDst <= 0;
@@ -109,8 +111,6 @@ module Controller(Op, func, RegDst, RegWrite, ALUSrc, MemRead, MemWrite, MemtoRe
             MemWrite <= 0;
             MemtoReg <= 1;
             PCSrc <= 0;
-            shl_sel <= 0;
-            shr_sel <= 0;
             end
             
             // sw    Store word

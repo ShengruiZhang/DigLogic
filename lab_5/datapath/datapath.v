@@ -1,12 +1,13 @@
 `timescale 1ns / 1ps
 
-module Datapath_top(Clk, Reset, MuxOut_DataMem);  
+module Datapath_top(Clk, Reset, debug_Reg23);  
     input Clk, Reset;    
-    output [31:0] MuxOut_DataMem;
+    wire [31:0] MuxOut_DataMem;
+    output [31:0] debug_Reg23;
 
     //--// Add below for post synthesis simulation //--//
     (* mark_debug = "true" *)
-    wire [31:0] debug_Reg8, debug_Reg16, debug_Reg17, debug_Reg18, debug_Reg19;
+    wire [31:0] debug_Reg8, debug_Reg16, debug_Reg17, debug_Reg18, debug_Reg19, debug_Reg20, debug_Reg21, debug_Reg22, debug_Reg23;
         
     // Wires from Controller
     wire shl_sel;
@@ -77,6 +78,6 @@ module Datapath_top(Clk, Reset, MuxOut_DataMem);
     //--// RegisterFile. The purpose of this to show you how to  
     //--// retain the signal for post-synthesis simulation
 
-    RegisterFile a4(RegRead1[4:0], Instr[20:16], WriteReg[4:0], MuxOut_DataMem, RegWrite, Clk, RegData1, RegData2, debug_Reg8, debug_Reg16, debug_Reg17, debug_Reg18,debug_Reg19);
+    RegisterFile a4(RegRead1[4:0], Instr[20:16], WriteReg[4:0], MuxOut_DataMem, RegWrite, Clk, RegData1, RegData2, debug_Reg8, debug_Reg16, debug_Reg17, debug_Reg18, debug_Reg19, debug_Reg20, debug_Reg21, debug_Reg22, debug_Reg23);
 
 endmodule
